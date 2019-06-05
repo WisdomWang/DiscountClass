@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LessonDetailTwoCell : UITableViewCell
 
+@property (nonatomic,strong) UILabel *label;
+@property (nonatomic,strong) UILabel *detailLabel;
+
 @end
 
 NS_ASSUME_NONNULL_END

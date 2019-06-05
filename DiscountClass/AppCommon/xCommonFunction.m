@@ -147,4 +147,29 @@
     
 }
 
++(NSString *)getNowTime {
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init] ;
+    
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    
+    NSDate *dateNow = [NSDate date];
+    
+    return [formatter stringFromDate:dateNow];
+}
+
++(NSString *)getSecretPhoneNum:(NSString *)phone {
+    
+    NSString *frontStr = [phone substringToIndex:3];
+    NSString *behindStr = [phone substringFromIndex:7];
+    NSString *str = [NSString stringWithFormat:@"%@****%@",frontStr,behindStr];
+    
+    return str;
+    
+}
+
 @end

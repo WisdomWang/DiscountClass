@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LessonModel.h"
+#import "AddressListModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ConfirmOrderVC : UIViewController
+
+@property (nonatomic,strong) LessonArrModel *m;
+@property (nonatomic,strong) AddressListDetailModel *addressModel;
+@property (nonatomic,copy)NSString *orderPrice;
 
 @end
 

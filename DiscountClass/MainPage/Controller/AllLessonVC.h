@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AllLessonVC : UIViewController
 
+@property (nonatomic,strong) NSString *kindStr;
+
 @end
 
 NS_ASSUME_NONNULL_END

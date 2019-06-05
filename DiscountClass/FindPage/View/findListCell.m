@@ -27,7 +27,7 @@
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
         _picImg = [[UIImageView alloc]init];
-        _picImg.image = [UIImage imageNamed:@"mainBanner"];
+        _picImg.image = [UIImage imageNamed:@"placeholderImage"];
         [self.contentView addSubview:_picImg];
         [_picImg mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self.mas_right).offset(-17);
@@ -40,7 +40,7 @@
         _titleLabel = [[UILabel alloc]init];
         _titleLabel.textColor = [UIColor colorWithHexString:@"#515151"];
         _titleLabel.font = [UIFont boldSystemFontOfSize:16];
-        _titleLabel.text = @"涨知识：人类首张黑洞照片问世！";
+        _titleLabel.text = @"管用的学习指南";
         _titleLabel.numberOfLines = 0;
         [self.contentView addSubview:_titleLabel];
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -52,7 +52,7 @@
         _timeLabel = [[UILabel alloc]init];
         _timeLabel.textColor = [UIColor colorWithHexString:@"#999999"];
         _timeLabel.font = [UIFont systemFontOfSize:12];
-        _timeLabel.text = @"2019年5月10日";
+        _timeLabel.text = @"今日推荐";
         [self.contentView addSubview:_timeLabel];
         [_timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.titleLabel.mas_bottom).offset(24);

@@ -40,4 +40,8 @@
 //获取当前时间戳
 +(NSInteger)getNowTimeTimestamp;
 
++(NSString *)getNowTime;
+
++(NSString *)getSecretPhoneNum:(NSString *)phone;
+
 @end

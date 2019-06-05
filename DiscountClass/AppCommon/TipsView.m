@@ -148,7 +148,7 @@ typedef NS_ENUM(NSInteger, ShowType)
             [UIView animateWithDuration:0.25f animations:^{
                 self.alpha = 0.0f;
             } completion:^(BOOL finished) {
-                _completion ? _completion() : nil;
+                self->_completion ? self->_completion() : nil;
                 [super removeFromSuperview];
             }];
         }];
@@ -156,7 +156,7 @@ typedef NS_ENUM(NSInteger, ShowType)
         [UIView animateWithDuration:0.25f animations:^{
             self.alpha = 0.0f;
         } completion:^(BOOL finished) {
-            _completion ? _completion() : nil;
+            self->_completion ? self->_completion() : nil;
             [super removeFromSuperview];
         }];
     }

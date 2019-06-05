@@ -7,14 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EduModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AllLessonListCell : UITableViewCell
+@interface AllEduListCell : UITableViewCell
 
 @property (nonatomic,strong)UILabel *titleLabel;
 @property (nonatomic,strong)UILabel *addressLabel;
 @property (nonatomic,strong)UIImageView *img;
+@property (nonatomic,strong)EduArrModel *model;
 
 @end
 

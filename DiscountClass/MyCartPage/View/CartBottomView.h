@@ -12,6 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CartBottomView : UIView
 
+@property (nonatomic,strong) UIButton  *selectedButton;
+@property (nonatomic,strong) UILabel *allPriceLabel;
+
+@property (nonatomic,copy) void (^AllClickRowBlock)(BOOL isClick);
+@property (nonatomic,copy) void (^PayBlock)(void);
+
+@property (nonatomic, assign) BOOL isClick;
+
 @end
 
 NS_ASSUME_NONNULL_END

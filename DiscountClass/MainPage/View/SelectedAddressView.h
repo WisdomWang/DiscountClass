@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddressListModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SelectedAddressView : UIView
+
+@property (nonatomic,strong) UITableView *mainTableView;
+@property (nonatomic,strong)NSMutableArray *addressArr;
+@property (nonatomic,copy) void (^popBackBlock)(void);
+@property (nonatomic,copy) void (^selectedBlock)(AddressListDetailModel *m);
 
 @end
 

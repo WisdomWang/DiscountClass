@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ConfirmPayVC : UIViewController
 
+@property (nonatomic,copy)NSString *orderPrice;
+@property (nonatomic,strong)NSMutableArray *orderIds;
+
 @end
 
 NS_ASSUME_NONNULL_END

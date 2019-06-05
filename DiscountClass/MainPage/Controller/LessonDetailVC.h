@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LessonModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LessonDetailVC : UIViewController
+
+@property (nonatomic,strong) LessonArrModel *m;
 
 @end
 

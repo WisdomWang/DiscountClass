@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PayResultVC : UIViewController
 
+@property (nonatomic,copy)NSString *msg;
+@property (nonatomic,assign) BOOL payResult;
+@property (nonatomic,copy)NSString *bankNo;
+
 @end
 
 NS_ASSUME_NONNULL_END

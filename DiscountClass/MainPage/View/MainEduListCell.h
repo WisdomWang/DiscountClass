@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MainEduListCell : UITableViewCell
 
+@property (nonatomic, strong) UICollectionView *cellCollectionView;
+@property (nonatomic, strong) NSMutableArray *eduListArr;
+
+@property (nonatomic,copy) void(^EduDetailBlcok)(NSIndexPath *indexPath);
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -10,7 +10,20 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
+typedef enum {
+    
+    FromNewBind,
+    FromOldBind
+    
+} BindBankFromPageType;
+
 @interface PayOrderVC : UIViewController
+
+@property (nonatomic,copy)NSString *orderPrice;
+@property (nonatomic,strong)NSMutableArray *orderIds;
+
+@property (nonatomic,assign) BindBankFromPageType  theType;
 
 @end
 

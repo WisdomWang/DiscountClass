@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MainEduCollectionViewCell : UICollectionViewCell
 
+@property (nonatomic, strong)  UIImageView *image;
+
 @end
 
 NS_ASSUME_NONNULL_END

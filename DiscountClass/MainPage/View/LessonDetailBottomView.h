@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LessonDetailBottomView : UIView
 
+@property (nonatomic,copy) void (^confirmBlock)(void);
+@property (nonatomic,copy) void (^linkEduBlock)(void);
+@property (nonatomic,copy) void (^linkCartBlock)(void);
+@property (nonatomic,copy) void (^addCartBlock)(void);
+
 @end
 
 NS_ASSUME_NONNULL_END

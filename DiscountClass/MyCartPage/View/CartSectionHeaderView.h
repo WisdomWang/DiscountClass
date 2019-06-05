@@ -7,10 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CartModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CartSectionHeaderView : UIView
+@interface CartSectionHeaderView : UITableViewHeaderFooterView
+
+@property (nonatomic,strong) UIButton  *selectedButton;
+@property (nonatomic,strong) UILabel * headerLabel;
+
+@property (nonatomic,strong)CartEduModel *eduModel;
+
+@property (nonatomic,copy) void (^AllClickRowBlock)(BOOL isClick);
+
+@property (nonatomic,assign) BOOL isClick;
 
 @end
 

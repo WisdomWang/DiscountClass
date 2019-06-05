@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PayOrderTwoCell : UITableViewCell
 
+@property (nonatomic,strong)UIImageView*bgView;
+@property (nonatomic,strong)UIImageView *iconImage;
+@property (nonatomic,strong)UILabel *label;
+
 @end
 
 NS_ASSUME_NONNULL_END

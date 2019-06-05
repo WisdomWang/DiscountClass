@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LessonModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LessonDetailCell : UITableViewCell
+
+@property (nonatomic,strong) UILabel *kindLabel;
+@property (nonatomic,strong) UILabel *titleLabel;
+@property (nonatomic,strong) UILabel *priceLabel;
+@property (nonatomic,strong) LessonArrModel *model;
 
 @end
 

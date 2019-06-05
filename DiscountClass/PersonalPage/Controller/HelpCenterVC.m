@@ -1,3 +1,4 @@
+
 //
 //  HelpCenterVC.m
 //  DiscountClass
@@ -7,8 +8,12 @@
 //
 
 #import "HelpCenterVC.h"
+#import <WebKit/WebKit.h>
+#import "ThirdLibsHeader.h"
 
 @interface HelpCenterVC ()
+
+@property (nonatomic,strong) WKWebView *webView;
 
 @end
 
@@ -17,6 +22,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.title = @"帮助中心";
+    
+    _webView = [[WKWebView alloc]initWithFrame:CGRectMake(0, xTopHeight, xScreenWidth, xScreenHeight-xTopHeight)];
+    [_webView loadRequest:[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://weixin.huifintech.com/account.html#FAQ"]]];
+    
+    [self.view addSubview:_webView];
 }
 
 /*
