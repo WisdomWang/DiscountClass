@@ -29,6 +29,7 @@ NSString *const xLessonDetailThreeCell = @"LessonDetailThreeCell";
 @property (nonatomic,strong) SelectedAddressView *addressView;
 @property (nonatomic,strong) AddressListDetailModel *model;
 @property (nonatomic,strong) MBProgressHUD *HUD;
+@property (nonatomic,copy) NSString *eduTel;
 
 @end
 
@@ -44,6 +45,7 @@ NSString *const xLessonDetailThreeCell = @"LessonDetailThreeCell";
     _addressArr = [[NSMutableArray alloc]init];
     
     [self initTableView];
+    [self loadEduInfo];
 }
 
 - (void)initTableView {
@@ -93,7 +95,11 @@ NSString *const xLessonDetailThreeCell = @"LessonDetailThreeCell";
     
     bottomView.linkEduBlock = ^{
         
-        NSMutableString * string = [[NSMutableString alloc] initWithFormat:@"tel:%@",@"15238032652"];
+        if (xNullString(self.eduTel)) {
+            [TipsView showCenterTitle:@"暂无联系方式" duration:1 completion:nil];
+            return;
+        }
+        NSMutableString * string = [[NSMutableString alloc] initWithFormat:@"tel:%@",self.eduTel];
         UIWebView * callWebview = [[UIWebView alloc] init];
         [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:string]]];
         [self.view addSubview:callWebview];
@@ -304,6 +310,24 @@ NSString *const xLessonDetailThreeCell = @"LessonDetailThreeCell";
         
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+}
+
+
+- (void)loadEduInfo {
+    
+    NSMutableDictionary *parameter = [[NSMutableDictionary alloc]init];
+    [parameter setValue: _m.eduId forKey:@"eduId"];
+    [HttpRequestManager postWithUrlString:GetEduInfo parameters:parameter success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSString *repData = [xCommonFunction dictionaryToJson:responseObject];
+        NSLog(@"%@",repData);
+        NSDictionary *dic = responseObject[@"data"];
+        self.eduTel = dic[@"linkMobile"];
+      
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
         
     }];
 }

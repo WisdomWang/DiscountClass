@@ -15,7 +15,7 @@
 #define GetAllAdv  [BASIC_URL stringByAppendingString:@"shop/adv/getAllAdv"]
 #define GetAllEduAddress  [BASIC_URL stringByAppendingString:@"shop/edu/getAllEduAddress"]
 #define GetEduInfo  [BASIC_URL stringByAppendingString:@"shop/edu/getEduInfo"]
-#define GetCourseInfo  [BASIC_URL stringByAppendingString:@"shop/course/getCourseInfo"]
+#define GetCourseInfo  [BASIC_URL stringByAppendingString:@"shop/course/getCourseDetail"]
 
 #define AddCourseCart  [BASIC_URL stringByAppendingString:@"shop/cart/addCourseCart"]
 #define GetCourseCart    [BASIC_URL stringByAppendingString:@"shop/cart/getCourseCart"]
