@@ -27,7 +27,6 @@
         _bgView.layer.cornerRadius = 8;
         _bgView.layer.masksToBounds = YES;
         _bgView.userInteractionEnabled = YES;
-        //_bgView.backgroundColor = [UIColor colorWithHexString:@"#e05a6b"];
         _bgView.image = [UIImage imageNamed:@"bankBg"];
         [self.contentView addSubview:_bgView];
         [_bgView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -40,16 +39,11 @@
         _iconImage = [[UIImageView alloc]init];
         _iconImage.image = [UIImage imageNamed:@"smallUnionPayIcon"];
         [_bgView addSubview:_iconImage];
-        _iconImage.layer.cornerRadius = 12.5;
-        _iconImage.clipsToBounds = YES;
         [_iconImage mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.bgView.mas_top).offset(19);
             make.left.equalTo(self.bgView.mas_left).offset(18);
-//            make.width.mas_equalTo(25);
-//            make.height.mas_equalTo(25);
         }];
         _label = [UILabel new];
-        _label.text = @"中国工商银行";
         _label.textColor = [UIColor whiteColor];
         _label.font = [UIFont systemFontOfSize:18];
         [_bgView addSubview:_label];
@@ -59,7 +53,6 @@
         }];
         
         _detailLabel = [UILabel new];
-        _detailLabel.text = @"****     ****     ****     7378";
         _detailLabel.textColor = [UIColor whiteColor];
         _detailLabel.font = [UIFont systemFontOfSize:20];
         [_bgView addSubview:_detailLabel];

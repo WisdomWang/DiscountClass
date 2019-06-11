@@ -227,9 +227,6 @@ NSString *const xConfirmOrderCell = @"ConfirmOrderCell";
 
 - (void)confirmOrderClick {
     
-//    PayOrderVC *vc= [[PayOrderVC alloc]init];
-//    [self.navigationController pushViewController:vc animated:YES];
-    
     NSMutableArray *courseIds = [[NSMutableArray alloc]init];
     [courseIds addObject:_addressModel.courseId];
     [self createOrder:courseIds];
@@ -249,9 +246,7 @@ NSString *const xConfirmOrderCell = @"ConfirmOrderCell";
         NSLog(@"%@",repData);
         
         if ([responseObject[@"success"] boolValue] == YES) {
-            
-//            PayOrderVC *vc= [[PayOrderVC alloc]init];
-//            [self.navigationController pushViewController:vc animated:YES];
+
             self.orderIds = responseObject[@"data"];
             
             [self GetAlinSignInfo];

@@ -46,7 +46,6 @@
             make.left.equalTo(self.bgView.mas_left).offset(20);
         }];
         _label = [UILabel new];
-        _label.text = @"中国工商银行";
         _label.textColor = [UIColor whiteColor];
         _label.font = [UIFont systemFontOfSize:15];
         [_bgView addSubview:_label];
@@ -64,7 +63,6 @@
         }];
         
         _detailLabel = [UILabel new];
-        _detailLabel.text = @"****     ****     ****     7378";
         _detailLabel.textColor = [UIColor whiteColor];
         _detailLabel.font = [UIFont boldSystemFontOfSize:24];
         [_bgView addSubview:_detailLabel];

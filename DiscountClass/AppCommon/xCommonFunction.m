@@ -28,30 +28,6 @@
     return [hash lowercaseString];
 }
 
-//获取当前的时间
-+ (NSString*)getCurrentTimes{
-    
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    
-    // ----------设置你想要的格式,hh与HH的区别:分别表示12小时制,24小时制
-    
-    [formatter setDateFormat:@"yyyy年MM月dd日"];
-    
-    //现在时间,你可以输出来看下是什么格式
-    
-    NSDate *datenow = [NSDate date];
-    
-    //----------将nsdate按formatter格式转成nsstring
-    
-    NSString *currentTimeString = [formatter stringFromDate:datenow];
-    
-    NSLog(@"currentTimeString =  %@",currentTimeString);
-    
-    return currentTimeString;
-    
-}
-
-//判断是否含有非法字符 yes 有 no没有
 + (BOOL)JudgeTheillegalCharacter:(NSString *)content{
     
     NSString *str =@"^[A-Za-z0-9\\u4e00-\u9fa5]+$";
@@ -66,7 +42,6 @@
     return NO;
 }
 
-//判断输入的字符串是否全为数字
 + (BOOL) deptNumInputShouldNumber:(NSString *)str
 {
     if (str.length == 0) {

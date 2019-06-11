@@ -27,11 +27,6 @@
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key {
     
-//    if ([key isEqualToString:@"success"]) {
-//        
-//        self.success = value;
-//    }
-    
 }
 
 @end
@@ -48,55 +43,6 @@
 }
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key {
-    
-//    if ([key isEqualToString:@"courseName"]) {
-//
-//        self.courseName = value;
-//    }
-//    if ([key isEqualToString:@"courseAttribute"]) {
-//
-//        self.courseAttribute = value;
-//    }
-//    if ([key isEqualToString:@"openTime"]) {
-//
-//        self.openTime = value;
-//    }
-//    if ([key isEqualToString:@"topPrice"]) {
-//
-//        self.topPrice = value;
-//    }
-//    if ([key isEqualToString:@"courseId"]) {
-//
-//        self.courseId = value;
-//    }
-//    if ([key isEqualToString:@"eduId"]) {
-//
-//        self.eduId = value;
-//    }
-//    if ([key isEqualToString:@"totalClass"]) {
-//
-//        self.totalClass = value;
-//    }
-//    if ([key isEqualToString:@"price"]) {
-//
-//        self.price = value;
-//    }
-//    if ([key isEqualToString:@"address"]) {
-//
-//        self.address = value;
-//    }
-//    if ([key isEqualToString:@"floorPrice"]) {
-//
-//        self.floorPrice = value;
-//    }
-//    if ([key isEqualToString:@"courseType"]) {
-//
-//        self.courseType = value;
-//    }
-//    if ([key isEqualToString:@"eduName"]) {
-//
-//        self.eduName = value;
-//    }
     
 }
 

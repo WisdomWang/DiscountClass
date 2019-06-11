@@ -58,7 +58,6 @@ NSString *const xEduCollectionViewCell = @"EduCellCollectionViewCell";
     cvFlowLayout.minimumLineSpacing         = lineSpacing;
     cvFlowLayout.minimumInteritemSpacing    = itemSpacing;
     cvFlowLayout.itemSize                   = CGSizeMake(itemWidth, itemHeight);
-    //cvFlowLayout.itemSize                   = CGSizeMake(92, 53);
     
     _cellCollectionView = [[UICollectionView alloc] initWithFrame:self.contentView.frame collectionViewLayout:cvFlowLayout];
     
@@ -96,7 +95,6 @@ NSString *const xEduCollectionViewCell = @"EduCellCollectionViewCell";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"dddddddd");
     self.EduDetailBlcok(indexPath);
 }
 

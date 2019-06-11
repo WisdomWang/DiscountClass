@@ -16,9 +16,6 @@
 //md5字符串加密
 + (NSString *)md5SignWithString:(NSString *)string;
 
-//获取当前的时间
-+ (NSString*)getCurrentTimes;
-
 //判断是否含有非法字符 yes 有  no没有
 + (BOOL)JudgeTheillegalCharacter:(NSString *)content;
 
@@ -40,8 +37,10 @@
 //获取当前时间戳
 +(NSInteger)getNowTimeTimestamp;
 
+//获取当前的时间
 +(NSString *)getNowTime;
 
+//手机号密文
 +(NSString *)getSecretPhoneNum:(NSString *)phone;
 
 @end

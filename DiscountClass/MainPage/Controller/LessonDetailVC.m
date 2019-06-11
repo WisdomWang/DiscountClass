@@ -287,15 +287,12 @@ NSString *const xLessonDetailThreeCell = @"LessonDetailThreeCell";
         NSString *repData = [xCommonFunction dictionaryToJson:responseObject];
         NSLog(@"%@",repData);
         if ([responseObject[@"success"] boolValue] == YES) {
-//            [TipsView showCenterTitle:@"加入购物车成功" duration:1 completion:^{
-//                
-//            }];
             
             self.HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
             [self.view addSubview:self.HUD];
             self.HUD.mode = MBProgressHUDModeCustomView;
             self.HUD.customView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"successTipIcon"]];
-            self.HUD.label.text = @"加入购物车成功 ";
+            self.HUD.label.text = @"加入购物车成功";
             self.HUD.label.textColor = [UIColor whiteColor];
             self.HUD.bezelView.backgroundColor = [UIColor colorWithHexString:@"#999999"];
             [self.HUD hideAnimated:YES afterDelay:1];

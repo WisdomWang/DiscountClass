@@ -130,10 +130,7 @@ NSString *const xOrderListOneCell = @"OrderListOneCell";
     };
     
     cell.payOrderBlock = ^{
-        
-//        PayOrderVC *vc= [[PayOrderVC alloc]init];
-//        [self.navigationController pushViewController:vc animated:YES];
-        
+
         [self getAlinSignInfo:m];
     };
     

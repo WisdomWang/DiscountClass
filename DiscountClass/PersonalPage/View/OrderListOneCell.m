@@ -38,7 +38,6 @@
         _orderIdLabel = [[UILabel alloc]init];
         _orderIdLabel.textColor = [UIColor colorWithHexString:@"#333333"];
         _orderIdLabel.font = [UIFont systemFontOfSize:12];
-        _orderIdLabel.text = @"订单编号：156135153153132135";
         [self.contentView addSubview:_orderIdLabel];
         [_orderIdLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(topView.mas_bottom);
@@ -70,7 +69,6 @@
         _eduLabel = [[UILabel alloc]init];
         _eduLabel.textColor = [UIColor colorWithHexString:@"#333333"];
         _eduLabel.font = [UIFont systemFontOfSize:12];
-        _eduLabel.text = @"所属机构：新世界教育";
         _eduLabel.numberOfLines = 0;
         [self.contentView addSubview:_eduLabel];
         [_eduLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -103,7 +101,6 @@
         _kindLabel.font = [UIFont systemFontOfSize:10];
         _kindLabel.layer.borderWidth = 0.5;
         _kindLabel.layer.borderColor = [[UIColor colorWithHexString:@"#f44640"] CGColor];
-        _kindLabel.text = @"学历";
         _kindLabel.textAlignment = NSTextAlignmentCenter;
         [middleView addSubview:_kindLabel];
         [_kindLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -116,7 +113,6 @@
         _titleLabel = [[UILabel alloc]init];
         _titleLabel.textColor = [UIColor colorWithHexString:@"#515151"];
         _titleLabel.font = [UIFont boldSystemFontOfSize:15];
-        _titleLabel.text = @"推荐推荐推荐推荐推荐推荐推荐推荐推荐推荐";
         _titleLabel.numberOfLines = 0;
         [middleView addSubview:_titleLabel];
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -151,7 +147,6 @@
         _addressLabel.textColor = [UIColor colorWithHexString:@"#999999"];
         _addressLabel.font = [UIFont systemFontOfSize:12];
         _addressLabel.numberOfLines = 0;
-        _addressLabel.text = @"上课地点上课地点上课地点上课地点上课地点上课地点上课地点上课地点上课地点上课地点上课地点";
         [middleView addSubview:_addressLabel];
         [_addressLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(placeLabel.mas_top);
@@ -171,7 +166,6 @@
         _priceLabel.textColor = [UIColor colorWithHexString:@"#515151"];
         _priceLabel.font = [UIFont systemFontOfSize:14];
         _priceLabel.textAlignment = NSTextAlignmentRight;
-        _priceLabel.text = @"共2件课程 实付款：￥21600";
         [self.contentView addSubview:_priceLabel];
         [_priceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(middleView.mas_bottom);

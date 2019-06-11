@@ -32,7 +32,6 @@
         _kindLabel.font = [UIFont systemFontOfSize:10];
         _kindLabel.layer.borderWidth = 0.5;
         _kindLabel.layer.borderColor = [[UIColor colorWithHexString:@"#f44640"] CGColor];
-       // _kindLabel.text = @"学历";
         _kindLabel.textAlignment = NSTextAlignmentCenter;
         [self.contentView addSubview:_kindLabel];
         [_kindLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -45,7 +44,6 @@
         _titleLabel = [[UILabel alloc]init];
         _titleLabel.textColor = [UIColor colorWithHexString:@"#515151"];
         _titleLabel.font = [UIFont boldSystemFontOfSize:16];
-      //  _titleLabel.text = @"为学子提供优质的教育服务和流畅的学费分期";
         _titleLabel.numberOfLines = 0;
         [self.contentView addSubview:_titleLabel];
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -80,7 +78,6 @@
         _priceLabel.textColor = [UIColor colorWithHexString:@"#ffle00"];
         _priceLabel.font = [UIFont systemFontOfSize:24];
         _priceLabel.numberOfLines = 0;
-        //_priceLabel.text = @"￥12800";
         [self.contentView addSubview:_priceLabel];
         [_priceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             
@@ -99,7 +96,6 @@
         [placeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(feelLabel.mas_bottom).offset(13);
             make.left.equalTo(self.contentView.mas_left).offset(17);
-           // make.bottom.equalTo(self.contentView.mas_bottom).offset(-21);
         }];
         
         _addressLabel = [[UILabel alloc]init];
@@ -107,13 +103,11 @@
         _addressLabel.font = [UIFont systemFontOfSize:11];
         _addressLabel.numberOfLines = 0;
         _addressLabel.preferredMaxLayoutWidth = xScreenWidth - 200;
-       // _addressLabel.text = @"上海市徐汇区田林路487号宝石园20号楼708-709室";
         [self.contentView addSubview:_addressLabel];
         [_addressLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(placeLabel.mas_top);
             make.left.equalTo(placeLabel.mas_right);
             make.right.equalTo(self.contentView.mas_right).offset(-120);
-           // make.bottom.equalTo(self.contentView.mas_bottom).offset(-21);
             make.bottom.equalTo(self.priceLabel.mas_bottom);
         }];
         

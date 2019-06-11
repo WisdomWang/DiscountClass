@@ -127,7 +127,6 @@ NSString *const xBindInfoPayCell = @"BindInfoPayCell";
     cell.label.text = labelTextArr[indexPath.row];
     cell.textField.placeholder = detailTextArr[indexPath.row];
     cell.textField.delegate = self;
- //   [cell.textField addTarget:self action:@selector(textChanged:) forControlEvents:UIControlEventEditingChanged];
     cell.textField.tag = 800+indexPath.row;
     if (indexPath.row == 3) {
         cell.sendCodeButton.hidden = NO;
@@ -167,12 +166,6 @@ NSString *const xBindInfoPayCell = @"BindInfoPayCell";
 
 - (void)gotoSuccess {
     
-    
-//    if (xNullString([_infoDic valueForKey:@"accountName"])||xNullString([_infoDic valueForKey:@"idNo"])||xNullString([_infoDic valueForKey:@"accountNo"])||xNullString([_infoDic valueForKey:@"tel"])||xNullString([_infoDic valueForKey:@"vercode"])) {
-//        [TipsView showCenterTitle:@"请输入完整信息" duration:1 completion:nil];
-//        return;
-//    }
-    
     if (xNullString([self.infoDic valueForKey:@"accountName"])) {
         [TipsView showCenterTitle:@"请输入您的真实姓名" duration:1 completion:nil];
         return;
@@ -203,9 +196,6 @@ NSString *const xBindInfoPayCell = @"BindInfoPayCell";
     
     [self VerifySignCode];
     
-//    ConfirmPayVC *vc= [[ConfirmPayVC alloc]init];
-//    vc.orderPrice = self.orderPrice;
-//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)changeStatus:(UIButton *)button {
@@ -288,29 +278,6 @@ NSString *const xBindInfoPayCell = @"BindInfoPayCell";
         [_infoDic setValue:textField.text forKey:@"vercode"];
     }
 }
-
-//- (void)textChanged:(UITextField *)textField {
-//
-//    if (xNullString(textField.text)) {
-//        return;
-//    }
-//
-//    if (textField.tag == 800) {
-//        [_infoDic setValue:textField.text forKey:@"accountName"];
-//    }
-//    else if (textField.tag == 801) {
-//        [_infoDic setValue:textField.text forKey:@"idNo"];
-//    }
-//    else if (textField.tag == 802) {
-//        [_infoDic setValue:textField.text forKey:@"accountNo"];
-//    }
-//    else if (textField.tag == 803) {
-//        [_infoDic setValue:textField.text forKey:@"tel"];
-//    }
-//    else if (textField.tag == 804) {
-//        [_infoDic setValue:textField.text forKey:@"vercode"];
-//    }
-//}
 
 - (void)GetSignCode {
     

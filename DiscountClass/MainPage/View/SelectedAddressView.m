@@ -33,8 +33,6 @@ NSString *const xSelectedAddressCell = @"SelectedAddressCell";
         [self createViews];
         self.backgroundColor = [[UIColor colorWithHexString:@"#000000"] colorWithAlphaComponent:0.5];;
         self.addressArr = [[NSMutableArray alloc]init];
-//        UITapGestureRecognizer *tap =[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(popBack)];
-//        [self addGestureRecognizer:tap];
     }
     return self;
 }

@@ -32,7 +32,6 @@
         _kindLabel.font = [UIFont systemFontOfSize:10];
         _kindLabel.layer.borderWidth = 0.5;
         _kindLabel.layer.borderColor = [[UIColor colorWithHexString:@"#f44640"] CGColor];
-        _kindLabel.text = @"学历";
         _kindLabel.textAlignment = NSTextAlignmentCenter;
         [self.contentView addSubview:_kindLabel];
         [_kindLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -45,7 +44,6 @@
         _titleLabel = [[UILabel alloc]init];
         _titleLabel.textColor = [UIColor colorWithHexString:@"#515151"];
         _titleLabel.font = [UIFont boldSystemFontOfSize:16];
-        _titleLabel.text = @"推荐推荐推荐推荐推荐推荐推荐推荐推荐推荐";
         _titleLabel.numberOfLines = 0;
         [self.contentView addSubview:_titleLabel];
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {

@@ -249,8 +249,6 @@ NSString *const xConfirmCartTwoCell = @"ConfirmCartTwoCell";
 
 - (void)confirmOrderClick {
     
-//    PayOrderVC *vc= [[PayOrderVC alloc]init];
-//    [self.navigationController pushViewController:vc animated:YES];
     NSMutableArray *selectedArr = [[NSMutableArray alloc]init];
     for (CartLessonModel *m in _selectedArr) {
         [selectedArr addObject:m.courseId];
@@ -272,8 +270,6 @@ NSString *const xConfirmCartTwoCell = @"ConfirmCartTwoCell";
         NSString *repData = [xCommonFunction dictionaryToJson:responseObject];
         NSLog(@"%@",repData);
         if ([responseObject[@"success"] boolValue] == YES) {
-//            PayOrderVC *vc= [[PayOrderVC alloc]init];
-//            [self.navigationController pushViewController:vc animated:YES];
             self.orderIds = responseObject[@"data"];
             [self getAlinSignInfo];
         }

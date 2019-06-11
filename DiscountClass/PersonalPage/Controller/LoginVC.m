@@ -48,8 +48,6 @@
     _phoneText.leftView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 16,40)];
     _phoneText.leftViewMode=UITextFieldViewModeAlways;
     _phoneText.keyboardType = UIKeyboardTypeNumberPad;
-   // _phoneText.delegate = self;
-    //[_phoneText addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     [self.view addSubview:_phoneText];
     
     [_phoneText mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -70,8 +68,6 @@
     _numText.leftView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 16,40)];
     _numText.leftViewMode=UITextFieldViewModeAlways;
     _numText.keyboardType = UIKeyboardTypeNumberPad;
-  //  _numText.delegate = self;
-   // [_numText addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     [self.view addSubview:_numText];
     [_numText mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view.mas_centerX);
@@ -152,6 +148,8 @@
 }
 
 - (void)getCodeClicked {
+    
+    [[IQKeyboardManager sharedManager] resignFirstResponder];
     
     if (!xNullString(_phoneText.text)) {
         [self getCode];

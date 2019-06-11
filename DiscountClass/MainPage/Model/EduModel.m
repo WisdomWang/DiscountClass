@@ -27,13 +27,7 @@
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key {
     
-//    if ([key isEqualToString:@"success"]) {
-//        
-//        self.success = value;
-//    }
-    
 }
-
 
 @end
 
@@ -50,26 +44,6 @@
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key {
     
-//    if ([key isEqualToString:@"eduId"]) {
-//
-//        self.eduId = value;
-//    }
-//    if ([key isEqualToString:@"icon"]) {
-//
-//        self.icon = value;
-//    }
-//    if ([key isEqualToString:@"address"]) {
-//
-//        self.address = value;
-//    }
-//    if ([key isEqualToString:@"eduName"]) {
-//
-//        self.eduName = value;
-//    }
-//    if ([key isEqualToString:@"labelList"]) {
-//
-//        self.labelList = value;
-//    }
 }
 
 @end

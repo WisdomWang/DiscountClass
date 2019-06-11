@@ -192,9 +192,6 @@ NSString *const xPayTwoCell = @"PayTwoCell";
 //    [self.navigationController pushViewController:vc animated:YES];
     
     [self fingerVerification];
-    
-    
-   // [self payOrderRequest];
 }
 
 - (void)payOrderRequest {

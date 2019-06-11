@@ -60,13 +60,6 @@ NSString *const xMainEduListCell = @"MainEduListCell";
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    if (@available(iOS 11.0, *)) {
-        [[[[self.navigationController.navigationBar subviews] objectAtIndex:0] subviews] objectAtIndex:1].alpha = 0;
-        [[[[[self.navigationController.navigationBar subviews] objectAtIndex:0] subviews] objectAtIndex:0] setHidden:NO];
-    } else {
-        
-        self.navigationController.navigationBar.subviews.firstObject.alpha = 0;
-    }
     
      [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
@@ -75,14 +68,6 @@ NSString *const xMainEduListCell = @"MainEduListCell";
     
     
     [super viewWillDisappear:animated];
-    
-    if (@available(iOS 11.0, *)) {
-        [[[[self.navigationController.navigationBar subviews] objectAtIndex:0] subviews] objectAtIndex:1].alpha = 1;
-        [[[[[self.navigationController.navigationBar subviews] objectAtIndex:0] subviews] objectAtIndex:0] setHidden:NO];
-    } else {
-        
-        self.navigationController.navigationBar.subviews.firstObject.alpha = 1;
-    }
     
      [self.navigationController setNavigationBarHidden:NO animated:animated];
     
@@ -245,7 +230,12 @@ NSString *const xMainEduListCell = @"MainEduListCell";
     if (section == 0) {
         return _lessonListArr.count;
     } else {
-        return 1;
+        if (_eduListArr.count > 0) {
+            return 1;
+        } else {
+           return 0;
+        }
+        
     }
 }
 

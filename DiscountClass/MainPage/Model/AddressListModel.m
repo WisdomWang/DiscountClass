@@ -27,11 +27,6 @@
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key {
     
-//    if ([key isEqualToString:@"success"]) {
-//        
-//        self.success = value;
-//    }
-    
 }
 
 @end
@@ -48,20 +43,7 @@
 }
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key {
-    
-//    if ([key isEqualToString:@"eduId"]) {
-//
-//        self.eduId = value;
-//    }
-//
-//    if ([key isEqualToString:@"address"]) {
-//
-//        self.address = value;
-//    }
-//    if ([key isEqualToString:@"eduId"]) {
-//
-//        self.eduId = value;
-//    }
+
 }
 
 @end

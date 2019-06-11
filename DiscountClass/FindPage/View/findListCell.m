@@ -34,7 +34,6 @@
             make.centerY.equalTo(self.mas_centerY);
             make.width.mas_equalTo(160);
             make.height.mas_equalTo(90);
-           // make.bottom.equalTo(self.contentView.mas_bottom).offset(12);
         }];
         
         _titleLabel = [[UILabel alloc]init];

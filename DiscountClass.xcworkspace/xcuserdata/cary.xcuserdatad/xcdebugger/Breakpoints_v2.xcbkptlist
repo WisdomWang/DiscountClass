@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DiscountClass/MainPage/Controller/ConfirmOrderVC.m"
-            timestampString = "581420801.4177721"
+            timestampString = "581936731.939797"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "284"
-            endingLineNumber = "284"
+            startingLineNumber = "279"
+            endingLineNumber = "279"
             landmarkName = "-GetAlinSignInfo"
             landmarkType = "7">
             <Locations>
@@ -58,11 +58,11 @@
                   moduleName = "DiscountClass"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/ConfirmOrderVC.m"
-                  timestampString = "581844115.250721"
+                  timestampString = "581936732.0527641"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "285"
-                  endingLineNumber = "285"
+                  startingLineNumber = "280"
+                  endingLineNumber = "280"
                   offsetFromSymbolStart = "526">
                </Location>
                <Location
@@ -73,11 +73,11 @@
                   moduleName = "DiscountClass"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/ConfirmOrderVC.m"
-                  timestampString = "581844115.252581"
+                  timestampString = "581936732.056698"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "285"
-                  endingLineNumber = "285"
+                  startingLineNumber = "280"
+                  endingLineNumber = "280"
                   offsetFromSymbolStart = "538">
                </Location>
             </Locations>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DiscountClass/MainPage/Controller/ConfirmOrderVC.m"
-            timestampString = "581420801.417845"
+            timestampString = "581936731.939862"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "273"
-            endingLineNumber = "273"
+            startingLineNumber = "268"
+            endingLineNumber = "268"
             landmarkName = "-GetAlinSignInfo"
             landmarkType = "7">
             <Locations>
@@ -106,11 +106,11 @@
                   moduleName = "DiscountClass"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/ConfirmOrderVC.m"
-                  timestampString = "581844115.257674"
+                  timestampString = "581936732.077053"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "273"
-                  endingLineNumber = "273"
+                  startingLineNumber = "268"
+                  endingLineNumber = "268"
                   offsetFromSymbolStart = "245">
                </Location>
                <Location
@@ -121,11 +121,11 @@
                   moduleName = "DiscountClass"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/ConfirmOrderVC.m"
-                  timestampString = "581844115.259745"
+                  timestampString = "581936732.0799021"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "275"
-                  endingLineNumber = "275"
+                  startingLineNumber = "270"
+                  endingLineNumber = "270"
                   offsetFromSymbolStart = "72">
                </Location>
             </Locations>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DiscountClass/MainPage/Controller/ConfirmOrderVC.m"
-            timestampString = "581420801.417908"
+            timestampString = "581936731.9399101"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "257"
-            endingLineNumber = "257"
+            startingLineNumber = "252"
+            endingLineNumber = "252"
             landmarkName = "-createOrder:"
             landmarkType = "7">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DiscountClass/MainPage/Controller/ConfirmOrderVC.m"
-            timestampString = "581420801.417963"
+            timestampString = "581936731.9399509"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "246"
-            endingLineNumber = "246"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
             landmarkName = "-createOrder:"
             landmarkType = "7">
             <Locations>
@@ -170,11 +170,11 @@
                   moduleName = "DiscountClass"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/ConfirmOrderVC.m"
-                  timestampString = "581844115.2703609"
+                  timestampString = "581936732.107627"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "246"
-                  endingLineNumber = "246"
+                  startingLineNumber = "243"
+                  endingLineNumber = "243"
                   offsetFromSymbolStart = "556">
                </Location>
                <Location
@@ -185,11 +185,11 @@
                   moduleName = "DiscountClass"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/ConfirmOrderVC.m"
-                  timestampString = "581844115.2734571"
+                  timestampString = "581936732.112793"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "248"
-                  endingLineNumber = "248"
+                  startingLineNumber = "245"
+                  endingLineNumber = "245"
                   offsetFromSymbolStart = "69">
                </Location>
             </Locations>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DiscountClass/MainPage/Controller/PayOrderVC.m"
-            timestampString = "581420801.418117"
+            timestampString = "581936731.939994"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "323"
-            endingLineNumber = "323"
+            startingLineNumber = "290"
+            endingLineNumber = "290"
             landmarkName = "-GetSignCode"
             landmarkType = "7">
             <Locations>
@@ -218,11 +218,11 @@
                   moduleName = "DiscountClass"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/PayOrderVC.m"
-                  timestampString = "581844115.278348"
+                  timestampString = "581936732.127472"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "323"
-                  endingLineNumber = "323"
+                  startingLineNumber = "290"
+                  endingLineNumber = "290"
                   offsetFromSymbolStart = "691">
                </Location>
                <Location
@@ -233,11 +233,11 @@
                   moduleName = "DiscountClass"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/PayOrderVC.m"
-                  timestampString = "581844115.2802401"
+                  timestampString = "581936732.129728"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "325"
-                  endingLineNumber = "325"
+                  startingLineNumber = "292"
+                  endingLineNumber = "292"
                   offsetFromSymbolStart = "69">
                </Location>
             </Locations>
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DiscountClass/MainPage/Controller/PayOrderVC.m"
-            timestampString = "581420801.418178"
+            timestampString = "581936731.940037"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "329"
-            endingLineNumber = "329"
+            startingLineNumber = "296"
+            endingLineNumber = "296"
             landmarkName = "-GetSignCode"
             landmarkType = "7">
          </BreakpointContent>
@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DiscountClass/MainPage/Controller/PayOrderVC.m"
-            timestampString = "581420801.418242"
+            timestampString = "581936731.940076"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "348"
-            endingLineNumber = "348"
+            startingLineNumber = "315"
+            endingLineNumber = "315"
             landmarkName = "-VerifySignCode"
             landmarkType = "7">
             <Locations>
@@ -282,11 +282,11 @@
                   moduleName = "DiscountClass"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/PayOrderVC.m"
-                  timestampString = "581844115.28817"
+                  timestampString = "581936732.139672"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "348"
-                  endingLineNumber = "348"
+                  startingLineNumber = "315"
+                  endingLineNumber = "315"
                   offsetFromSymbolStart = "397">
                </Location>
                <Location
@@ -297,11 +297,11 @@
                   moduleName = "DiscountClass"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/PayOrderVC.m"
-                  timestampString = "581844115.289979"
+                  timestampString = "581936732.1420341"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "350"
-                  endingLineNumber = "350"
+                  startingLineNumber = "317"
+                  endingLineNumber = "317"
                   offsetFromSymbolStart = "72">
                </Location>
             </Locations>
@@ -314,11 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DiscountClass/MainPage/Controller/PayOrderVC.m"
-            timestampString = "581420801.418291"
+            timestampString = "581936731.940116"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "352"
-            endingLineNumber = "352"
+            startingLineNumber = "319"
+            endingLineNumber = "319"
             landmarkName = "-VerifySignCode"
             landmarkType = "7">
          </BreakpointContent>
@@ -330,11 +330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DiscountClass/MainPage/Controller/ConfirmPayVC.m"
-            timestampString = "581479053.817893"
+            timestampString = "581936731.940158"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "244"
-            endingLineNumber = "244"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
             landmarkName = "-GetAlinSignInfo"
             landmarkType = "7">
          </BreakpointContent>
@@ -346,11 +346,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DiscountClass/MainPage/Controller/ConfirmPayVC.m"
-            timestampString = "581479053.819772"
+            timestampString = "581936731.940199"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "258"
-            endingLineNumber = "258"
+            startingLineNumber = "255"
+            endingLineNumber = "255"
             landmarkName = "-UnsignRequest"
             landmarkType = "7">
             <Locations>
@@ -362,11 +362,11 @@
                   moduleName = "DiscountClass"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/ConfirmPayVC.m"
-                  timestampString = "581844115.300213"
+                  timestampString = "581936732.150591"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "258"
-                  endingLineNumber = "258"
+                  startingLineNumber = "255"
+                  endingLineNumber = "255"
                   offsetFromSymbolStart = "381">
                </Location>
                <Location
@@ -377,11 +377,11 @@
                   moduleName = "DiscountClass"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/ConfirmPayVC.m"
-                  timestampString = "581844115.302102"
+                  timestampString = "581936732.1525"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "260"
-                  endingLineNumber = "260"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
                   offsetFromSymbolStart = "72">
                </Location>
             </Locations>

@@ -48,7 +48,6 @@
 		4A1F80D5228412D500B786E6 /* MainSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F80D4228412D500B786E6 /* MainSearchView.m */; };
 		4A1F80D822842B3500B786E6 /* OrderListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F80D722842B3500B786E6 /* OrderListVC.m */; };
 		4A7BAD6A22782B580009CBF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7BAD6922782B580009CBF2 /* AppDelegate.m */; };
-		4A7BAD6D22782B580009CBF2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7BAD6C22782B580009CBF2 /* ViewController.m */; };
 		4A7BAD7022782B580009CBF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A7BAD6E22782B580009CBF2 /* Main.storyboard */; };
 		4A7BAD7222782B590009CBF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A7BAD7122782B590009CBF2 /* Assets.xcassets */; };
 		4A7BAD7522782B590009CBF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A7BAD7322782B590009CBF2 /* LaunchScreen.storyboard */; };
@@ -173,8 +172,6 @@
 		4A7BAD6522782B580009CBF2 /* DiscountClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiscountClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A7BAD6822782B580009CBF2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4A7BAD6922782B580009CBF2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4A7BAD6B22782B580009CBF2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4A7BAD6C22782B580009CBF2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4A7BAD6F22782B580009CBF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A7BAD7122782B590009CBF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A7BAD7422782B590009CBF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -292,8 +289,6 @@
 				4A7BADA622782D7C0009CBF2 /* PersonalPage */,
 				4A7BAD6822782B580009CBF2 /* AppDelegate.h */,
 				4A7BAD6922782B580009CBF2 /* AppDelegate.m */,
-				4A7BAD6B22782B580009CBF2 /* ViewController.h */,
-				4A7BAD6C22782B580009CBF2 /* ViewController.m */,
 				4A7BAD6E22782B580009CBF2 /* Main.storyboard */,
 				4A7BAD7122782B590009CBF2 /* Assets.xcassets */,
 				4A7BAD7322782B590009CBF2 /* LaunchScreen.storyboard */,
@@ -770,7 +765,6 @@
 				4A1179572282C5BB005024DC /* LessonDetailVC.m in Sources */,
 				4A137DD6228E91BE00CC9809 /* CartSectionHeaderView.m in Sources */,
 				4A1F80D5228412D500B786E6 /* MainSearchView.m in Sources */,
-				4A7BAD6D22782B580009CBF2 /* ViewController.m in Sources */,
 				4A1167D82292AA0E000CB28F /* HelpCenterVC.m in Sources */,
 				4A7E4EDB229D170600C17C63 /* OpinionSuccessVC.m in Sources */,
 				4A1F80D822842B3500B786E6 /* OrderListVC.m in Sources */,

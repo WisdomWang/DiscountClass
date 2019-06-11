@@ -24,7 +24,6 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"帮助中心";
-    
     _webView = [[WKWebView alloc]initWithFrame:CGRectMake(0, xTopHeight, xScreenWidth, xScreenHeight-xTopHeight)];
     [_webView loadRequest:[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://weixin.huifintech.com/account.html#FAQ"]]];
     

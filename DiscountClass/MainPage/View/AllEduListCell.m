@@ -38,8 +38,6 @@
             make.left.equalTo(self.contentView.mas_left).offset(17);
             make.width.mas_equalTo(90);
             make.height.mas_equalTo(40);
-//            make.top.equalTo(self.contentView.mas_top).offset(50);
-//            make.bottom.equalTo(self.contentView.mas_bottom).offset(-50);
         }];
        
         _titleLabel = [[UILabel alloc]init];
@@ -98,12 +96,8 @@
                     make.height.mas_equalTo(16);
                     make.bottom.equalTo(self.contentView.mas_bottom).offset(-20);
                 }];
-                
             }
-            
-           
         }
-        
     }
     
     return self;
