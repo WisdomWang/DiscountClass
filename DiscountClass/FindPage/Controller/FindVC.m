@@ -105,6 +105,7 @@ NSString *const xFindHotCell = @"FindHotCell";
     
     if (indexPath.section == 0) {
         findHotCell *cell = [tableView dequeueReusableCellWithIdentifier:xFindHotCell];
+        cell.backgroundColor = [UIColor colorWithHexString:@"#f8f8f8"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     } else {

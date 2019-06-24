@@ -81,6 +81,7 @@ NSString *const xAllLessonListCell = @"AllLessonListCell";
     _mainTableView.rowHeight = UITableViewAutomaticDimension;
     [_mainTableView registerClass:[MainListCell class] forCellReuseIdentifier:xAllLessonListCell];
     [self.view addSubview:_mainTableView];
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

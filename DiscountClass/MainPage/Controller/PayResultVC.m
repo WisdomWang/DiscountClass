@@ -107,7 +107,6 @@ NSString *const xPayResultCell = @"PayResultCell";
             successIcon.image = [UIImage imageNamed:@"failedIcon"];
         }
         
-        
         UILabel *priceLabel = [[UILabel alloc]init];
         priceLabel.textColor = [UIColor colorWithHexString:@"#333333"];
         priceLabel.font = [UIFont boldSystemFontOfSize:30];
@@ -191,8 +190,6 @@ NSString *const xPayResultCell = @"PayResultCell";
         
         [self.navigationController popViewControllerAnimated:YES];
     }
-    
-   
 }
 
 /*
