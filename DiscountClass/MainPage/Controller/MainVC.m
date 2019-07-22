@@ -175,6 +175,19 @@ NSString *const xMainEduListCell = @"MainEduListCell";
     return 48;
 }
 
+//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+//    
+//    return 10;
+//}
+//
+//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+//    
+//    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, xScreenWidth, 10)];
+//    view.backgroundColor = [UIColor clearColor];
+//    
+//    return view;
+//}
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, xScreenWidth, 48)];
@@ -362,7 +375,7 @@ NSString *const xMainEduListCell = @"MainEduListCell";
     }
     
     NSMutableDictionary *parameter = [[NSMutableDictionary alloc]init];
-    [parameter setValue:@"5"forKey:@"size"];
+    [parameter setValue:@"3"forKey:@"size"];
     [parameter setValue:@"1"  forKey:@"current"];
     if ([lessonKind isEqualToString:@""]) {
          [parameter setValue:@"1"forKey:@"isHot"];

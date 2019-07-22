@@ -12,7 +12,7 @@
 
 NSString *const xSelectedAddressCell = @"SelectedAddressCell";
 
-@interface SelectedAddressView ()<UITableViewDataSource,UITableViewDelegate>
+@interface SelectedAddressView ()<UITableViewDataSource,UITableViewDelegate,UIGestureRecognizerDelegate>
 
 @end
 
@@ -33,6 +33,9 @@ NSString *const xSelectedAddressCell = @"SelectedAddressCell";
         [self createViews];
         self.backgroundColor = [[UIColor colorWithHexString:@"#000000"] colorWithAlphaComponent:0.5];;
         self.addressArr = [[NSMutableArray alloc]init];
+        UITapGestureRecognizer *tap =[[UITapGestureRecognizer alloc]initWithTarget:self action:(@selector(popBack))];
+        [self addGestureRecognizer:tap];
+        tap.delegate = self;
     }
     return self;
 }
@@ -106,6 +109,13 @@ NSString *const xSelectedAddressCell = @"SelectedAddressCell";
 - (void)popBack {
     
     self.popBackBlock();
+}
+
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    if ([NSStringFromClass([touch.view class]) isEqualToString:@"UITableViewCellContentView"]) {//判断如果点击的是tableView的cell，就把手势给关闭了
+        return NO;//关闭手势
+    }//否则手势存在
+    return YES;
 }
 
 @end
