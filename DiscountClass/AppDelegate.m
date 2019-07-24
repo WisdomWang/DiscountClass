@@ -64,7 +64,6 @@
 - (UITabBarItem *)tabBarItemWithName:(NSString *)name imageName:(NSString *)imageName imageSelectedName:(NSString *)imageSelectedName {
     
     UITabBarItem *tabItem = [[UITabBarItem alloc]initWithTitle:name image:[UIImage imageNamed:imageName] selectedImage:[UIImage imageNamed:imageSelectedName]];
-    [tabItem setTitleTextAttributes:@{ NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#f44640"]} forState:UIControlStateSelected];
     return tabItem;
 }
 

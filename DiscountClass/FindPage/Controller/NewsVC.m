@@ -25,15 +25,13 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"资讯文章";
     
-    _webView = [[WKWebView alloc]initWithFrame:CGRectMake(0, xTopHeight, xScreenWidth, xScreenHeight-xTopHeight)];
-  //  [_webView loadRequest:[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://mp.weixin.qq.com/mp/homepage?__biz=MzU5NjEwNzYwOA==&hid=2&sn=8aa7f59c4ba2c0fb4e74bbedba996506&scene=18#wechat_redirect"]]];
+    CGRect webViewFrame = CGRectMake(0, xTopHeight, xScreenWidth, xScreenHeight-xTopHeight);
     
-    [_webView loadRequest:[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://mp.sohu.com/profile?xpt=cHBhZzIxMjk3NjA1Y2ZiMkBzb2h1LmNvbQ==&_f=index_pagemp_1&spm=smpc.content.author.1.1559116747497NyUp1ml"]]];
-    
-   // [_webView loadRequest:[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://www.jianshu.com/u/61a385078fba"]]];
-   //  [_webView loadRequest:[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://mp.weixin.qq.com/profile?src=3&timestamp=1559787386&ver=1&signature=AThnheBv8c6EDc4jSs1ErpzElapOGGOWo3-6aeGTt2DsCF8q0*jo3DK3kr-dThUwt-ZKv00ErDWckCK-rJ3Ckw=="]]];
-
-    
+    if ([UIDevice currentDevice].systemVersion.doubleValue <11.0) {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    } 
+    _webView = [[WKWebView alloc]initWithFrame:webViewFrame];
+    [_webView loadRequest:[NSMutableURLRequest requestWithURL:[NSURL URLWithString:_urlStr]]];
     [self.view addSubview:_webView];
 }
 

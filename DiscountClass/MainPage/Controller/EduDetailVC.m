@@ -16,7 +16,7 @@
 
 NSString *const xEduDetailCell = @"EduDetailCell";
 
-@interface EduDetailVC ()<UITableViewDelegate,UITableViewDataSource>
+@interface EduDetailVC ()<UITableViewDelegate,UITableViewDataSource,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate>
 
 @property (nonatomic,strong) UITableView *mainTableView;
 @property (nonatomic,strong) UIView *userHeaderView;
@@ -42,6 +42,8 @@ NSString *const xEduDetailCell = @"EduDetailCell";
     _mainTableView.backgroundColor = [UIColor colorWithHexString:@"#f8f8f8"];
     _mainTableView.delegate = self;
     _mainTableView.dataSource = self;
+    _mainTableView.emptyDataSetSource = self;
+    _mainTableView.emptyDataSetDelegate = self;
     _mainTableView.showsVerticalScrollIndicator = NO;
     _mainTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     _mainTableView.tableHeaderView = self.userHeaderView;
@@ -112,6 +114,23 @@ NSString *const xEduDetailCell = @"EduDetailCell";
     vc.m = m;
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView {
+    
+    NSString *text = @"该机构课程正在添加中";
+    NSMutableParagraphStyle *paragraph = [NSMutableParagraphStyle new];
+    paragraph.lineBreakMode = NSLineBreakByWordWrapping;
+    paragraph.alignment = NSTextAlignmentCenter;
+    
+    NSDictionary *attributes = @{
+                                 NSFontAttributeName:[UIFont systemFontOfSize:14.0f],
+                                 NSForegroundColorAttributeName:[UIColor lightGrayColor],
+                                 NSParagraphStyleAttributeName:paragraph
+                                 };
+    
+    return [[NSAttributedString alloc] initWithString:text attributes:attributes];
+    
 }
 
 - (void)loadLessonList:(NSString *)eduId {

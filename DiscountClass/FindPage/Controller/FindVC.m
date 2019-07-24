@@ -11,7 +11,10 @@
 #import "findHotCell.h"
 #import "findListCell.h"
 #import "NewsVC.h"
-
+#import "NewsModel.h"
+#import "LessonModel.h"
+#import "BannerModel.h"
+#import "LessonDetailVC.h"
 
 NSString *const xFindListCell = @"FindListCell";
 NSString *const xFindHotCell = @"FindHotCell";
@@ -19,6 +22,9 @@ NSString *const xFindHotCell = @"FindHotCell";
 @interface FindVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong) UITableView *mainTableView;
+@property (nonatomic,strong) NSMutableArray *newsListArr;
+@property (nonatomic,strong) NSMutableArray *advArr;
+@property (nonatomic,strong) NSMutableArray *picArr;
 
 @end
 
@@ -29,7 +35,12 @@ NSString *const xFindHotCell = @"FindHotCell";
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"发现";
+    _newsListArr = [[NSMutableArray alloc]init];
+    _advArr = [[NSMutableArray alloc]init];
+    _picArr = [[NSMutableArray alloc]init];
     [self createUI];
+    [self loadNewsList];
+    [self loadBanner];
 }
 
 - (void)createUI {
@@ -97,19 +108,29 @@ NSString *const xFindHotCell = @"FindHotCell";
     if (section == 0) {
         return 1;
     } else {
-        return 0;
+        return _newsListArr.count;
     }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    __weak typeof(self) weakSelf = self;
+    
     if (indexPath.section == 0) {
         findHotCell *cell = [tableView dequeueReusableCellWithIdentifier:xFindHotCell];
         cell.backgroundColor = [UIColor colorWithHexString:@"#f8f8f8"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.cycleScrollView.imageURLStringsGroup = _picArr;
+        cell.gotoDetailBlock = ^(NSInteger index) {
+            
+            BannerDetailModel *m = weakSelf.advArr[index];
+            [weakSelf loadBannerDetail:m.courseId];
+            
+        };
         return cell;
     } else {
         findListCell *cell = [tableView dequeueReusableCellWithIdentifier:xFindListCell];
+        cell.model = _newsListArr[indexPath.row];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
@@ -119,10 +140,79 @@ NSString *const xFindHotCell = @"FindHotCell";
     
     if (indexPath.section == 1) {
         
+        NewsListModel *m = _newsListArr[indexPath.row];
         NewsVC *vc = [[NewsVC alloc]init];
+        vc.urlStr = m.url;
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
     }
+}
+
+- (void)loadNewsList {
+    
+    
+    [HttpRequestManager postWithUrlString:GetAllInformation parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSString *repData = [xCommonFunction dictionaryToJson:responseObject];
+        NSLog(@"%@",repData);
+        
+        NewsModel *baseData =  [[NewsModel alloc]initWithDic:responseObject];
+        if (baseData.success == YES) {
+            
+            for (NewsListModel *m in baseData.data) {
+                [self.newsListArr addObject:m];
+            }
+            [self.mainTableView reloadData];
+        }
+   
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+}
+
+- (void)loadBanner {
+    
+    [HttpRequestManager postWithUrlString:GetWeekHotAdv parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSString *repData = [xCommonFunction dictionaryToJson:responseObject];
+        NSLog(@"%@",repData);
+        BannerModel *baseData = [[BannerModel alloc]initWithDic:responseObject];
+        if (baseData.success == YES) {
+            
+        }for (BannerDetailModel *m in baseData.data) {
+            
+            [self.advArr addObject:m];
+            [self.picArr addObject:m.img];
+        }
+        [self.mainTableView reloadData];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+}
+
+- (void)loadBannerDetail:(NSString *)courseId {
+    
+    NSMutableDictionary *parameter = [[NSMutableDictionary alloc]init];
+    [parameter setValue:courseId  forKey:@"courseId"];
+    
+    [HttpRequestManager postWithUrlString:GetCourseInfo parameters:parameter success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSString *repData = [xCommonFunction dictionaryToJson:responseObject];
+        NSLog(@"%@",repData);
+        if ([responseObject[@"success"] boolValue]) {
+            
+            LessonArrModel *m =  [[LessonArrModel alloc]initWithDic:responseObject[@"data"]];
+            LessonDetailVC *vc = [[LessonDetailVC alloc]init];
+            vc.m = m;
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+            
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
 }
 
 /*

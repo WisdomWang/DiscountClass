@@ -9,7 +9,9 @@
 #ifndef APIConfig_h
 #define APIConfig_h
 
-#define BASIC_URL @"http://192.168.1.133:8087/hxxentry_shop/"
+//#define BASIC_URL @"http://192.168.1.133:8087/hxxentry_shop/"
+#define BASIC_URL @"http://dev.huifintech.com/hxxentry_shop/"
+
 #define GetAllCourse  [BASIC_URL stringByAppendingString:@"shop/course/getAllCourse"]
 #define GetAllEduIcon  [BASIC_URL stringByAppendingString:@"shop/edu/getAllEduIcon"]
 #define GetAllAdv  [BASIC_URL stringByAppendingString:@"shop/adv/getAllAdv"]
@@ -30,9 +32,18 @@
 #define UnSignRequest    [BASIC_URL stringByAppendingString:@"shop/allin/unSign"]
 #define PayOrder    [BASIC_URL stringByAppendingString:@"shop/order/payOrder"]
 
+#define GetAllInformation    [BASIC_URL stringByAppendingString:@"shop/adv/getAllInformation"]
+#define GetCourseDetailHtml    [BASIC_URL stringByAppendingString:@"shop/course/getCourseDetailHtml"]
+
+#define GetWeekHotAdv    [BASIC_URL stringByAppendingString:@"shop/adv/getWeekHotAdv"]
+
+
 
 #define GetLoginCode  @"http://testweixin.huifintech.com/hxx/user/sendCode"
 #define Login         @"http://testweixin.huifintech.com/hxx/user/validateLoginCode"
+
+//#define GetLoginCode  @"http://weixin.huifintech.com/hxx/user/sendCode"
+//#define Login         @"http://weixin.huifintech.com/hxx/user/validateLoginCode"
 
 
 #endif /* APIConfig_h */

@@ -60,6 +60,7 @@
         [feelLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.titleLabel.mas_bottom).offset(24);
             make.left.equalTo(self.contentView.mas_left).offset(17);
+            make.width.mas_equalTo(60);
         }];
         
         for (int i = 0; i<5; i++) {
@@ -96,13 +97,15 @@
         [placeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(feelLabel.mas_bottom).offset(13);
             make.left.equalTo(self.contentView.mas_left).offset(17);
+            make.width.mas_equalTo(60);
         }];
         
         _addressLabel = [[UILabel alloc]init];
         _addressLabel.textColor = [UIColor colorWithHexString:@"#999999"];
         _addressLabel.font = [UIFont systemFontOfSize:11];
         _addressLabel.numberOfLines = 0;
-        _addressLabel.preferredMaxLayoutWidth = xScreenWidth - 200;
+      //  _addressLabel.preferredMaxLayoutWidth = xScreenWidth - 200;
+        _addressLabel.textAlignment = NSTextAlignmentLeft;
         [self.contentView addSubview:_addressLabel];
         [_addressLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(placeLabel.mas_top);
@@ -111,8 +114,6 @@
             make.bottom.equalTo(self.priceLabel.mas_bottom);
         }];
         
-        
-     
     }
         return self;
     }

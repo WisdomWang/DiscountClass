@@ -17,11 +17,13 @@
 #import "LessonModel.h"
 #import "EduModel.h"
 #import "EduDetailVC.h"
+#import "MainSearchVC.h"
+#import "BannerModel.h"
 
 NSString *const xMainListCell = @"MainListCell";
 NSString *const xMainEduListCell = @"MainEduListCell";
 
-@interface MainVC ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate,SDCycleScrollViewDelegate> {
+@interface MainVC ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate,SDCycleScrollViewDelegate,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate> {
     
     NSArray *titileArr;
     UIScrollView *scrollView;
@@ -51,10 +53,8 @@ NSString *const xMainEduListCell = @"MainEduListCell";
     _eduListArr = [[NSMutableArray alloc]init];
     _advArr = [[NSMutableArray alloc]init];
     kindStr = @"推荐";
-    [self loadBanner];
-     [self loadEduIcon];
-    [self createUI];
-    [self loadLessonList:@""];
+     [self createUI];
+     [self NetworkMonitoring];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -72,7 +72,6 @@ NSString *const xMainEduListCell = @"MainEduListCell";
      [self.navigationController setNavigationBarHidden:NO animated:animated];
     
 }
-
 
 - (void)createUI {
     
@@ -164,6 +163,8 @@ NSString *const xMainEduListCell = @"MainEduListCell";
         _userHeaderView.userInteractionEnabled = YES;
         
         _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(14, 15, xScreenWidth-28, 125) delegate:self placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
+        _cycleScrollView.backgroundColor = [UIColor colorWithHexString:@"f8f8f8"];
+        _cycleScrollView.delegate = self;
         [_userHeaderView addSubview:_cycleScrollView];
         
     }
@@ -172,21 +173,9 @@ NSString *const xMainEduListCell = @"MainEduListCell";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+
     return 48;
 }
-
-//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-//    
-//    return 10;
-//}
-//
-//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-//    
-//    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, xScreenWidth, 10)];
-//    view.backgroundColor = [UIColor clearColor];
-//    
-//    return view;
-//}
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
@@ -229,6 +218,9 @@ NSString *const xMainEduListCell = @"MainEduListCell";
         make.right.equalTo(view.mas_right).offset(-17);
         make.height.mas_equalTo(16);
     }];
+    if (section == 1) {
+        moreButton.hidden = YES;
+    }
     
     return view;
 }
@@ -339,31 +331,44 @@ NSString *const xMainEduListCell = @"MainEduListCell";
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     
-    _mainSearchView = [[MainSearchView alloc]initWithFrame:CGRectMake(0, xScreenHeight, xScreenWidth, xScreenHeight-xTopHeight)];
-    UIWindow *window = [UIApplication sharedApplication].keyWindow;
-     [window insertSubview:_mainSearchView aboveSubview:window];
-    [UIView animateWithDuration:0.5 animations:^{
-        self.mainSearchView.frame = CGRectMake(0, 0, xScreenWidth, xScreenHeight);
-
-    } completion:^(BOOL finished) {
-        
-    }];
-     __weak typeof(self) weakSelf = self;
-    _mainSearchView.cancelBlock = ^{
-    };
-    _mainSearchView.searchLessonBlock = ^(LessonArrModel * _Nonnull m) {
-        
-        [UIView animateWithDuration:0.5 animations:^{
-            weakSelf.mainSearchView.frame = CGRectMake(0, xScreenHeight, xScreenWidth, xScreenHeight);
-        } completion:^(BOOL finished) {
-            [weakSelf.mainSearchView removeFromSuperview];
-        }];
-        
-        LessonDetailVC *vc = [[LessonDetailVC alloc]init];
-        vc.m = m;
-        vc.hidesBottomBarWhenPushed = YES;
-        [weakSelf.navigationController pushViewController:vc animated:YES];
-    };
+//    _mainSearchView = [[MainSearchView alloc]initWithFrame:CGRectMake(0, xScreenHeight, xScreenWidth, xScreenHeight-xTopHeight)];
+//    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+//     [window insertSubview:_mainSearchView aboveSubview:window];
+//    [UIView animateWithDuration:0.5 animations:^{
+//        self.mainSearchView.frame = CGRectMake(0, 0, xScreenWidth, xScreenHeight);
+//
+//    } completion:^(BOOL finished) {
+//
+//    }];
+//     __weak typeof(self) weakSelf = self;
+//    _mainSearchView.cancelBlock = ^{
+//    };
+//    _mainSearchView.searchLessonBlock = ^(LessonArrModel * _Nonnull m) {
+//
+//        [UIView animateWithDuration:0.5 animations:^{
+//            weakSelf.mainSearchView.frame = CGRectMake(0, xScreenHeight, xScreenWidth, xScreenHeight);
+//        } completion:^(BOOL finished) {
+//            [weakSelf.mainSearchView removeFromSuperview];
+//        }];
+//
+//        LessonDetailVC *vc = [[LessonDetailVC alloc]init];
+//        vc.m = m;
+//        vc.hidesBottomBarWhenPushed = YES;
+//        [weakSelf.navigationController pushViewController:vc animated:YES];
+//    };
+    
+    MainSearchVC *vc = [[MainSearchVC alloc]init];
+    vc.hidesBottomBarWhenPushed = YES;
+    CATransition* transition = [CATransition animation];
+    
+    transition.duration =0.4f;
+    
+    transition.type = kCATransitionMoveIn;
+    
+    transition.subtype = kCATransitionFromTop;
+    
+    [self.navigationController.view.layer addAnimation:transition forKey:kCATransition];
+    [self.navigationController pushViewController:vc animated:NO];
     
     return NO;
 }
@@ -431,24 +436,94 @@ NSString *const xMainEduListCell = @"MainEduListCell";
         
         NSString *repData = [xCommonFunction dictionaryToJson:responseObject];
         NSLog(@"%@",repData);
-        if ([responseObject[@"success"] boolValue]) {
+        
+        NSMutableArray *picArr = [[NSMutableArray alloc]init];
+        BannerModel *baseData = [[BannerModel alloc]initWithDic:responseObject];
+        if (baseData.success == YES) {
             
-            for (NSDictionary *dic in responseObject[@"data"]) {
-                
-                NSString *address = dic[@"img"];
-                [self.advArr addObject:address];
-                
-            }
-            NSLog(@"%@",self->_advArr);
-            self.cycleScrollView.imageURLStringsGroup = self.advArr;
+        }for (BannerDetailModel *m in baseData.data) {
+            
+            [self.advArr addObject:m];
+            [picArr addObject:m.img];
         }
         
+        self.cycleScrollView.imageURLStringsGroup = picArr;
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
 }
 
+// 点击图片代理方法
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index {
+    NSLog(@"---点击了第%ld张图片", (long)index);
+    BannerDetailModel *m = _advArr[index];
+    [self loadBannerDetail:m.courseId];
+}
+
+- (void)loadBannerDetail:(NSString *)courseId {
+    
+    NSMutableDictionary *parameter = [[NSMutableDictionary alloc]init];
+    [parameter setValue:courseId  forKey:@"courseId"];
+    
+    [HttpRequestManager postWithUrlString:GetCourseInfo parameters:parameter success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSString *repData = [xCommonFunction dictionaryToJson:responseObject];
+        NSLog(@"%@",repData);
+        if ([responseObject[@"success"] boolValue]) {
+
+            LessonArrModel *m =  [[LessonArrModel alloc]initWithDic:responseObject[@"data"]];
+            LessonDetailVC *vc = [[LessonDetailVC alloc]init];
+            vc.m = m;
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+            
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+}
+
+//- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView {
+//    return [UIImage imageNamed:@"settingInfoIcon"];
+//}
+
+- (NSAttributedString *)buttonTitleForEmptyDataSet:(UIScrollView *)scrollView forState:(UIControlState)state {
+    NSString *text = @"网络不给力，请点击重试哦~";
+    
+    NSMutableAttributedString *attStr = [[NSMutableAttributedString alloc] initWithString:text];
+    // 设置所有字体大小为 #15
+    [attStr addAttribute:NSFontAttributeName
+                   value:[UIFont systemFontOfSize:15.0]
+                   range:NSMakeRange(0, text.length)];
+    // 设置所有字体颜色为浅灰色
+    [attStr addAttribute:NSForegroundColorAttributeName
+                   value:[UIColor lightGrayColor]
+                   range:NSMakeRange(0, text.length)];
+    // 设置指定4个字体为蓝色
+    [attStr addAttribute:NSForegroundColorAttributeName
+                   value:HexColor(@"#f44640")
+                   range:NSMakeRange(7, 4)];
+    
+         return attStr;
+   
+}
+
+- (CGFloat)verticalOffsetForEmptyDataSet:(UIScrollView *)scrollView {
+    return 150.0f;
+}
+
+- (void)emptyDataSet:(UIScrollView *)scrollView didTapButton:(UIButton *)button {
+    // button clicked...
+    [self loadBanner];
+    [self loadEduIcon];
+    [self loadLessonList:@""];
+}
+
+- (void)emptyDataSetWillAppear:(UIScrollView *)scrollView {
+    self.mainTableView.contentOffset = CGPointZero;
+}
 
 - (void)NetworkMonitoring
 {
@@ -467,9 +542,16 @@ NSString *const xMainEduListCell = @"MainEduListCell";
         switch (status) {
             case AFNetworkReachabilityStatusUnknown:
                 NSLog(@"未知");
+                self->_mainTableView.emptyDataSetSource = self;
+                self->_mainTableView.emptyDataSetDelegate = self;
+                [self->_mainTableView reloadData];
                 break;
             case AFNetworkReachabilityStatusNotReachable:
                 NSLog(@"此时没有网络");
+                self->_mainTableView.emptyDataSetSource = self;
+                self->_mainTableView.emptyDataSetDelegate = self;
+                [self->_mainTableView reloadData];
+                
                 break;
             case AFNetworkReachabilityStatusReachableViaWWAN:
                 NSLog(@"移动网络");

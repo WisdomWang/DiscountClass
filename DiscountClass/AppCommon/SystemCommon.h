@@ -34,5 +34,7 @@
 #define PhoneNum  @"phoneNum"
 #define UserId    @"userId"
 
+#define HotCourseId  @"1cba4507fwg5506e211ac079ed"
+
 
 #endif /* Header_h */

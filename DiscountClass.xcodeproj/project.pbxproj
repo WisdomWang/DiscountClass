@@ -18,6 +18,7 @@
 		4A10BD12228D40D50086A898 /* AddressListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A10BD11228D40D50086A898 /* AddressListModel.m */; };
 		4A10BD15228D5AC00086A898 /* PayOrderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A10BD14228D5AC00086A898 /* PayOrderVC.m */; };
 		4A1114D8229E77F1000DD5B2 /* BankListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1114D7229E77F1000DD5B2 /* BankListCell.m */; };
+		4A114A6422E69ABF00803414 /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A114A6322E69ABF00803414 /* NewsModel.m */; };
 		4A1167CF22925338000CB28F /* PayResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1167CE22925338000CB28F /* PayResultVC.m */; };
 		4A1167D2229288B8000CB28F /* ConfirmCartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1167D1229288B8000CB28F /* ConfirmCartCell.m */; };
 		4A1167D52292A987000CB28F /* BankCardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1167D42292A987000CB28F /* BankCardVC.m */; };
@@ -47,6 +48,7 @@
 		4A1F80D22284075600B786E6 /* AllEduVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F80D12284075600B786E6 /* AllEduVC.m */; };
 		4A1F80D5228412D500B786E6 /* MainSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F80D4228412D500B786E6 /* MainSearchView.m */; };
 		4A1F80D822842B3500B786E6 /* OrderListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F80D722842B3500B786E6 /* OrderListVC.m */; };
+		4A6CEBC822E7F0030092B8CC /* BannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CEBC722E7F0030092B8CC /* BannerModel.m */; };
 		4A7BAD6A22782B580009CBF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7BAD6922782B580009CBF2 /* AppDelegate.m */; };
 		4A7BAD7022782B580009CBF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A7BAD6E22782B580009CBF2 /* Main.storyboard */; };
 		4A7BAD7222782B590009CBF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A7BAD7122782B590009CBF2 /* Assets.xcassets */; };
@@ -61,6 +63,8 @@
 		4A7E4ED8229D16A300C17C63 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7E4ED7229D16A300C17C63 /* UITextView+Placeholder.m */; };
 		4A7E4EDB229D170600C17C63 /* OpinionSuccessVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7E4EDA229D170600C17C63 /* OpinionSuccessVC.m */; };
 		4A92472F22A79C45003E7526 /* BankModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A92472E22A79C45003E7526 /* BankModel.m */; };
+		4A93549A22E6D7F300B0399C /* MainSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A93549922E6D7F300B0399C /* MainSearchVC.m */; };
+		4A93549C22E70A7F00B0399C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A93549B22E70A7F00B0399C /* Images.xcassets */; };
 		4A96235B22890C1600E655CB /* TipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A96235922890C1600E655CB /* TipsView.m */; };
 		4A96235E22890C2700E655CB /* HttpRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A96235C22890C2700E655CB /* HttpRequestManager.m */; };
 		4A96236122890ECB00E655CB /* xCommonFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A96235F22890ECB00E655CB /* xCommonFunction.m */; };
@@ -111,6 +115,8 @@
 		4A10BD14228D5AC00086A898 /* PayOrderVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayOrderVC.m; sourceTree = "<group>"; };
 		4A1114D6229E77F1000DD5B2 /* BankListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BankListCell.h; sourceTree = "<group>"; };
 		4A1114D7229E77F1000DD5B2 /* BankListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BankListCell.m; sourceTree = "<group>"; };
+		4A114A6222E69ABF00803414 /* NewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsModel.h; sourceTree = "<group>"; };
+		4A114A6322E69ABF00803414 /* NewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsModel.m; sourceTree = "<group>"; };
 		4A1167CD22925338000CB28F /* PayResultVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayResultVC.h; sourceTree = "<group>"; };
 		4A1167CE22925338000CB28F /* PayResultVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayResultVC.m; sourceTree = "<group>"; };
 		4A1167D0229288B8000CB28F /* ConfirmCartCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfirmCartCell.h; sourceTree = "<group>"; };
@@ -169,6 +175,8 @@
 		4A1F80D4228412D500B786E6 /* MainSearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainSearchView.m; sourceTree = "<group>"; };
 		4A1F80D622842B3500B786E6 /* OrderListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderListVC.h; sourceTree = "<group>"; };
 		4A1F80D722842B3500B786E6 /* OrderListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderListVC.m; sourceTree = "<group>"; };
+		4A6CEBC622E7F0030092B8CC /* BannerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerModel.h; sourceTree = "<group>"; };
+		4A6CEBC722E7F0030092B8CC /* BannerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerModel.m; sourceTree = "<group>"; };
 		4A7BAD6522782B580009CBF2 /* DiscountClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiscountClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A7BAD6822782B580009CBF2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4A7BAD6922782B580009CBF2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -199,6 +207,9 @@
 		4A7E4EDA229D170600C17C63 /* OpinionSuccessVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpinionSuccessVC.m; sourceTree = "<group>"; };
 		4A92472D22A79C45003E7526 /* BankModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BankModel.h; sourceTree = "<group>"; };
 		4A92472E22A79C45003E7526 /* BankModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BankModel.m; sourceTree = "<group>"; };
+		4A93549822E6D7F300B0399C /* MainSearchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainSearchVC.h; sourceTree = "<group>"; };
+		4A93549922E6D7F300B0399C /* MainSearchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainSearchVC.m; sourceTree = "<group>"; };
+		4A93549B22E70A7F00B0399C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4A96235922890C1600E655CB /* TipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsView.m; sourceTree = "<group>"; };
 		4A96235A22890C1600E655CB /* TipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsView.h; sourceTree = "<group>"; };
 		4A96235C22890C2700E655CB /* HttpRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequestManager.m; sourceTree = "<group>"; };
@@ -294,6 +305,7 @@
 				4A7BAD7322782B590009CBF2 /* LaunchScreen.storyboard */,
 				4A7BAD7622782B590009CBF2 /* Info.plist */,
 				4A7BAD7722782B590009CBF2 /* main.m */,
+				4A93549B22E70A7F00B0399C /* Images.xcassets */,
 			);
 			path = DiscountClass;
 			sourceTree = "<group>";
@@ -335,6 +347,8 @@
 				4A96236722895CFF00E655CB /* EduModel.m */,
 				4A10BD10228D40D50086A898 /* AddressListModel.h */,
 				4A10BD11228D40D50086A898 /* AddressListModel.m */,
+				4A6CEBC622E7F0030092B8CC /* BannerModel.h */,
+				4A6CEBC722E7F0030092B8CC /* BannerModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -393,6 +407,8 @@
 				4AF4EC8B22A5039800E38C74 /* ConfirmPayVC.m */,
 				4A1167CD22925338000CB28F /* PayResultVC.h */,
 				4A1167CE22925338000CB28F /* PayResultVC.m */,
+				4A93549822E6D7F300B0399C /* MainSearchVC.h */,
+				4A93549922E6D7F300B0399C /* MainSearchVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -410,6 +426,8 @@
 		4A7BAD9F22782CD50009CBF2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4A114A6222E69ABF00803414 /* NewsModel.h */,
+				4A114A6322E69ABF00803414 /* NewsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -678,6 +696,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A7BAD7522782B590009CBF2 /* LaunchScreen.storyboard in Resources */,
+				4A93549C22E70A7F00B0399C /* Images.xcassets in Resources */,
 				4A7BAD7222782B590009CBF2 /* Assets.xcassets in Resources */,
 				4A7BAD7022782B580009CBF2 /* Main.storyboard in Resources */,
 			);
@@ -769,6 +788,7 @@
 				4A7E4EDB229D170600C17C63 /* OpinionSuccessVC.m in Sources */,
 				4A1F80D822842B3500B786E6 /* OrderListVC.m in Sources */,
 				4A0D9B4322816E3500378CE9 /* SettingVC.m in Sources */,
+				4A93549A22E6D7F300B0399C /* MainSearchVC.m in Sources */,
 				4AF4EC8C22A5039800E38C74 /* ConfirmPayVC.m in Sources */,
 				4A7BADAC22782E2C0009CBF2 /* MainVC.m in Sources */,
 				4A1B74C222A643B0002AC71D /* PayOrderTwoCell.m in Sources */,
@@ -779,6 +799,7 @@
 				4A11795D2282C8F0005024DC /* OrderDetailVC.m in Sources */,
 				4A7BAD7822782B590009CBF2 /* main.m in Sources */,
 				4AF4EC8F22A50FC200E38C74 /* PayOrderOneCell.m in Sources */,
+				4A114A6422E69ABF00803414 /* NewsModel.m in Sources */,
 				4A10BD15228D5AC00086A898 /* PayOrderVC.m in Sources */,
 				4A137DD3228E8AE600CC9809 /* CartModel.m in Sources */,
 				4A96236522891F6C00E655CB /* LessonModel.m in Sources */,
@@ -798,6 +819,7 @@
 				4A10BD0C228CFD7B0086A898 /* ConfirmOrderVC.m in Sources */,
 				4A1114D8229E77F1000DD5B2 /* BankListCell.m in Sources */,
 				4A11795A2282C75B005024DC /* NewsVC.m in Sources */,
+				4A6CEBC822E7F0030092B8CC /* BannerModel.m in Sources */,
 				4A7BADB222782E5C0009CBF2 /* MyCartVC.m in Sources */,
 				4A1167DB2292AA5C000CB28F /* AboutVC.m in Sources */,
 				4A96235B22890C1600E655CB /* TipsView.m in Sources */,
@@ -987,6 +1009,8 @@
 			baseConfigurationReference = EBCD713AFF4F2582C2AA5622 /* Pods-DiscountClass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BHN73T23TJ;
 				INFOPLIST_FILE = DiscountClass/Info.plist;
@@ -997,6 +1021,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZexueEducation.DiscountClass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$PODS_ROOT/**";
 			};
@@ -1007,6 +1032,8 @@
 			baseConfigurationReference = B1962682F92996F315FDA981 /* Pods-DiscountClass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BHN73T23TJ;
 				INFOPLIST_FILE = DiscountClass/Info.plist;
@@ -1017,6 +1044,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZexueEducation.DiscountClass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$PODS_ROOT/**";
 			};

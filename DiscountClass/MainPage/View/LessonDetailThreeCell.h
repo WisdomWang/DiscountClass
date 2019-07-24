@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface LessonDetailThreeCell : UITableViewCell
 
 @property (nonatomic,strong) WKWebView *webView;
+@property (nonatomic,copy) NSString *htmlStr;
+
 
 @end
 

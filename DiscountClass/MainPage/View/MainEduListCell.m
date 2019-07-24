@@ -54,7 +54,7 @@ NSString *const xEduCollectionViewCell = @"EduCellCollectionViewCell";
     
     UICollectionViewFlowLayout *cvFlowLayout = [[UICollectionViewFlowLayout alloc] init];
     cvFlowLayout.scrollDirection            = UICollectionViewScrollDirectionVertical;
-    cvFlowLayout.sectionInset               = UIEdgeInsetsMake(15, itemSpacing, 0, itemSpacing);
+    cvFlowLayout.sectionInset               = UIEdgeInsetsMake(15, itemSpacing, 10, itemSpacing);
     cvFlowLayout.minimumLineSpacing         = lineSpacing;
     cvFlowLayout.minimumInteritemSpacing    = itemSpacing;
     cvFlowLayout.itemSize                   = CGSizeMake(itemWidth, itemHeight);
@@ -75,7 +75,7 @@ NSString *const xEduCollectionViewCell = @"EduCellCollectionViewCell";
         make.left.equalTo(self.contentView.mas_left);
         make.right.equalTo(self.contentView.mas_right);
         make.bottom.equalTo(self.contentView.mas_bottom);
-        make.height.mas_equalTo(236);
+        make.height.mas_equalTo(246);
     }];
 }
 

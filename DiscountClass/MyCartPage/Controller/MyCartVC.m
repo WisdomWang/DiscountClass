@@ -41,9 +41,7 @@ NSString *const xMyCartSectionHeader = @"MyCartSectionHeader";
     
     _EduArr = [[NSMutableArray alloc]init];
     _selectedArr = [[NSMutableArray alloc]init];
-
     [self createUI];
-    //[self loadCartList];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -432,7 +430,9 @@ NSString *const xMyCartSectionHeader = @"MyCartSectionHeader";
             if (self.EduArr.count > 0) {
                 [self createBottomView];
             } else {
-                [self.bottomView removeFromSuperview];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                     [self.bottomView removeFromSuperview];
+                });
             }
             [self.mainTableView reloadData];
             

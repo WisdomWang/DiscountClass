@@ -4,17 +4,27 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DiscountClass/MyCartPage/Controller/MyCartVC.m"
-            timestampString = "581334588.175382"
+            timestampString = "585647223.302699"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "435"
-            endingLineNumber = "435"
+            startingLineNumber = "432"
+            endingLineNumber = "432"
             landmarkName = "-loadCartList"
             landmarkType = "7">
          </BreakpointContent>
@@ -22,15 +32,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DiscountClass/MyCartPage/Controller/MyCartVC.m"
-            timestampString = "581334588.175452"
+            timestampString = "585647223.308403"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "433"
-            endingLineNumber = "433"
+            startingLineNumber = "418"
+            endingLineNumber = "418"
             landmarkName = "-loadCartList"
             landmarkType = "7">
          </BreakpointContent>
@@ -41,109 +51,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DiscountClass/MainPage/Controller/ConfirmOrderVC.m"
-            timestampString = "581936731.939797"
+            filePath = "DiscountClass/MyCartPage/Controller/MyCartVC.m"
+            timestampString = "585647223.308489"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "279"
-            endingLineNumber = "279"
-            landmarkName = "-GetAlinSignInfo"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__33-[ConfirmOrderVC GetAlinSignInfo]_block_invoke"
-                  moduleName = "DiscountClass"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/ConfirmOrderVC.m"
-                  timestampString = "585482237.0398231"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "280"
-                  endingLineNumber = "280"
-                  offsetFromSymbolStart = "526">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__33-[ConfirmOrderVC GetAlinSignInfo]_block_invoke"
-                  moduleName = "DiscountClass"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/ConfirmOrderVC.m"
-                  timestampString = "585482237.041567"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "280"
-                  endingLineNumber = "280"
-                  offsetFromSymbolStart = "538">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DiscountClass/MainPage/Controller/ConfirmOrderVC.m"
-            timestampString = "581936731.939862"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "268"
-            endingLineNumber = "268"
-            landmarkName = "-GetAlinSignInfo"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ConfirmOrderVC GetAlinSignInfo]"
-                  moduleName = "DiscountClass"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/ConfirmOrderVC.m"
-                  timestampString = "585482237.046461"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "268"
-                  endingLineNumber = "268"
-                  offsetFromSymbolStart = "245">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__33-[ConfirmOrderVC GetAlinSignInfo]_block_invoke"
-                  moduleName = "DiscountClass"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/ConfirmOrderVC.m"
-                  timestampString = "585482237.049518"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "270"
-                  endingLineNumber = "270"
-                  offsetFromSymbolStart = "72">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DiscountClass/MainPage/Controller/ConfirmOrderVC.m"
-            timestampString = "581936731.9399101"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "252"
-            endingLineNumber = "252"
-            landmarkName = "-createOrder:"
+            startingLineNumber = "424"
+            endingLineNumber = "424"
+            landmarkName = "-loadCartList"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -153,317 +67,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DiscountClass/MainPage/Controller/ConfirmOrderVC.m"
-            timestampString = "581936731.9399509"
+            filePath = "DiscountClass/MyCartPage/Controller/MyCartVC.m"
+            timestampString = "585647223.30855"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "243"
-            endingLineNumber = "243"
-            landmarkName = "-createOrder:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ConfirmOrderVC createOrder:]"
-                  moduleName = "DiscountClass"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/ConfirmOrderVC.m"
-                  timestampString = "585482237.06168"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "243"
-                  endingLineNumber = "243"
-                  offsetFromSymbolStart = "556">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__30-[ConfirmOrderVC createOrder:]_block_invoke"
-                  moduleName = "DiscountClass"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/ConfirmOrderVC.m"
-                  timestampString = "585482237.064207"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "245"
-                  endingLineNumber = "245"
-                  offsetFromSymbolStart = "69">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DiscountClass/MainPage/Controller/PayOrderVC.m"
-            timestampString = "581936731.939994"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "290"
-            endingLineNumber = "290"
-            landmarkName = "-GetSignCode"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[PayOrderVC GetSignCode]"
-                  moduleName = "DiscountClass"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/PayOrderVC.m"
-                  timestampString = "585482237.070521"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "290"
-                  endingLineNumber = "290"
-                  offsetFromSymbolStart = "691">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__25-[PayOrderVC GetSignCode]_block_invoke"
-                  moduleName = "DiscountClass"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/PayOrderVC.m"
-                  timestampString = "585482237.076072"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "292"
-                  endingLineNumber = "292"
-                  offsetFromSymbolStart = "69">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DiscountClass/MainPage/Controller/PayOrderVC.m"
-            timestampString = "581936731.940037"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "296"
-            endingLineNumber = "296"
-            landmarkName = "-GetSignCode"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DiscountClass/MainPage/Controller/PayOrderVC.m"
-            timestampString = "581936731.940076"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "315"
-            endingLineNumber = "315"
-            landmarkName = "-VerifySignCode"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[PayOrderVC VerifySignCode]"
-                  moduleName = "DiscountClass"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/PayOrderVC.m"
-                  timestampString = "585482237.093996"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "315"
-                  endingLineNumber = "315"
-                  offsetFromSymbolStart = "397">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__28-[PayOrderVC VerifySignCode]_block_invoke"
-                  moduleName = "DiscountClass"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/PayOrderVC.m"
-                  timestampString = "585482237.095998"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "317"
-                  endingLineNumber = "317"
-                  offsetFromSymbolStart = "72">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DiscountClass/MainPage/Controller/PayOrderVC.m"
-            timestampString = "581936731.940116"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "319"
-            endingLineNumber = "319"
-            landmarkName = "-VerifySignCode"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DiscountClass/MainPage/Controller/ConfirmPayVC.m"
-            timestampString = "585477216.568825"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "241"
-            endingLineNumber = "241"
-            landmarkName = "-GetAlinSignInfo"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DiscountClass/MainPage/Controller/ConfirmPayVC.m"
-            timestampString = "585477216.568929"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "255"
-            endingLineNumber = "255"
-            landmarkName = "-UnsignRequest"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ConfirmPayVC UnsignRequest]"
-                  moduleName = "DiscountClass"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/ConfirmPayVC.m"
-                  timestampString = "585482237.107587"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "255"
-                  endingLineNumber = "255"
-                  offsetFromSymbolStart = "381">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__29-[ConfirmPayVC UnsignRequest]_block_invoke"
-                  moduleName = "DiscountClass"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/MainPage/Controller/ConfirmPayVC.m"
-                  timestampString = "585482237.110561"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "257"
-                  endingLineNumber = "257"
-                  offsetFromSymbolStart = "72">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DiscountClass/PersonalPage/Controller/BankCardVC.m"
-            timestampString = "581420801.41847"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DiscountClass/PersonalPage/Controller/BankCardVC.m"
-            timestampString = "581420801.418514"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__46-[BankCardVC tableView:cellForRowAtIndexPath:]_block_invoke"
-                  moduleName = "DiscountClass"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/PersonalPage/Controller/BankCardVC.m"
-                  timestampString = "581415909.156505"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77"
-                  offsetFromSymbolStart = "106">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__46-[BankCardVC tableView:cellForRowAtIndexPath:]_block_invoke_2"
-                  moduleName = "DiscountClass"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cary/Desktop/DiscountClass/DiscountClass/PersonalPage/Controller/BankCardVC.m"
-                  timestampString = "581415909.158709"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "48">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DiscountClass/PersonalPage/Controller/BankCardVC.m"
-            timestampString = "581420801.418558"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            startingLineNumber = "429"
+            endingLineNumber = "429"
+            landmarkName = "-loadCartList"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

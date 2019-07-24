@@ -18,6 +18,7 @@ NSString *const xBindInfoPayCell = @"BindInfoPayCell";
     
     NSArray *labelTextArr;
     NSArray *detailTextArr;
+    BOOL    hadAgree;
     
 }
 
@@ -36,6 +37,7 @@ NSString *const xBindInfoPayCell = @"BindInfoPayCell";
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"绑定银行卡";
+    hadAgree = NO;
     
     _infoDic = [[NSMutableDictionary alloc]init];
     
@@ -191,6 +193,11 @@ NSString *const xBindInfoPayCell = @"BindInfoPayCell";
         [TipsView showCenterTitle:@"请输入短信验证码" duration:1 completion:nil];
         return;
     }
+    else if (hadAgree == NO) {
+        
+        [TipsView showCenterTitle:@"请同意协议" duration:1 completion:nil];
+        return;
+    }
     
     [[IQKeyboardManager sharedManager] resignFirstResponder];
     
@@ -203,8 +210,11 @@ NSString *const xBindInfoPayCell = @"BindInfoPayCell";
     if (button.selected) {
         
          [button setImage:[UIImage imageNamed:@"unSelectedIconXieyi"] forState:UIControlStateNormal];
+         hadAgree = NO;
     } else {
+        
         [button setImage:[UIImage imageNamed:@"selectedIconXieyi"] forState:UIControlStateNormal];
+        hadAgree = YES;
     }
     
     button.selected = !button.selected;

@@ -37,24 +37,43 @@
         make.top.equalTo(self.view.mas_top).offset(138);
     }];
     
+    UILabel *phoneLabel = [[UILabel alloc]init];
+    phoneLabel.text = @"手机号";
+    phoneLabel.textColor = [UIColor colorWithHexString:@"#3a3a3a"];
+    phoneLabel.font = [UIFont systemFontOfSize:14];
+    [self.view addSubview:phoneLabel];
+    [phoneLabel  mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left).offset(40);
+        make.top.equalTo(bgImage.mas_bottom).offset(32);
+    }];
+    
     _phoneText = [[UITextField alloc]init];
     _phoneText.placeholder = @"请输入手机号";
     _phoneText.textColor = [UIColor colorWithHexString:@"#333333"];
     _phoneText.font = [UIFont systemFontOfSize:14];
     _phoneText.layer.masksToBounds = YES;
     _phoneText.layer.cornerRadius = 20;
-    _phoneText.layer.borderColor= [UIColor colorWithHexString:@"#e5e5e5"].CGColor;
+    _phoneText.layer.borderColor= [UIColor colorWithHexString:@"#eeeeee"].CGColor;
     _phoneText.layer.borderWidth= 1.0f;
     _phoneText.leftView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 16,40)];
     _phoneText.leftViewMode=UITextFieldViewModeAlways;
     _phoneText.keyboardType = UIKeyboardTypeNumberPad;
     [self.view addSubview:_phoneText];
-    
     [_phoneText mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view.mas_centerX);
-        make.top.equalTo(bgImage.mas_bottom).offset(48);
-        make.width.mas_equalTo(303);
+        make.left.equalTo(self.view.mas_left).offset(40);
+        make.right.equalTo(self.view.mas_right).offset(-40);
+        make.top.equalTo(phoneLabel.mas_bottom).offset(8);
         make.height.mas_equalTo(40);
+    }];
+    
+    UILabel *numLabel = [[UILabel alloc]init];
+    numLabel.text = @"验证码";
+    numLabel.textColor = [UIColor colorWithHexString:@"#3a3a3a"];
+    numLabel.font = [UIFont systemFontOfSize:14];
+    [self.view addSubview:numLabel];
+    [numLabel  mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left).offset(40);
+        make.top.equalTo(self.phoneText.mas_bottom).offset(22);
     }];
     
     _numText = [[UITextField alloc]init];
@@ -63,16 +82,16 @@
     _numText.font = [UIFont systemFontOfSize:14];
     _numText.layer.masksToBounds = YES;
     _numText.layer.cornerRadius = 20;
-    _numText.layer.borderColor= [UIColor colorWithHexString:@"#e5e5e5"].CGColor;
+    _numText.layer.borderColor= [UIColor colorWithHexString:@"#eeeeee"].CGColor;
     _numText.layer.borderWidth= 1.0f;
     _numText.leftView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 16,40)];
     _numText.leftViewMode=UITextFieldViewModeAlways;
     _numText.keyboardType = UIKeyboardTypeNumberPad;
     [self.view addSubview:_numText];
     [_numText mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view.mas_centerX);
-        make.top.equalTo(self.phoneText.mas_bottom).offset(8);
-        make.width.mas_equalTo(303);
+        make.left.equalTo(self.view.mas_left).offset(40);
+        make.top.equalTo(numLabel.mas_bottom).offset(8);
+        make.right.equalTo(self.view.mas_right).offset(-40);
         make.height.mas_equalTo(40);
     }];
     
@@ -93,7 +112,7 @@
     UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [loginButton setTitle:@"登录" forState:0];
     [loginButton setTitleColor:[UIColor whiteColor] forState:0];
-    loginButton.backgroundColor = [UIColor colorWithHexString:@"#f44640"];
+    loginButton.backgroundColor = [UIColor colorWithHexString:@"#fe6a51"];
     loginButton.titleLabel.font = [UIFont systemFontOfSize:15];
     loginButton.layer.masksToBounds = YES;
     loginButton.layer.cornerRadius = 20;
@@ -101,7 +120,7 @@
     [self.view addSubview:loginButton];
     [loginButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view.mas_centerX);
-        make.top.equalTo(self.numText.mas_bottom).offset(8);
+        make.top.equalTo(self.numText.mas_bottom).offset(15);
         make.width.mas_equalTo(303);
         make.height.mas_equalTo(40);
     }];

@@ -44,16 +44,21 @@
         }];
         
         _webView = [[WKWebView alloc]init];
-     //   [_webView loadRequest:[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://weibo.com"]]];
+        _webView.scrollView.bounces = false;
         [self.contentView addSubview:_webView];
         [_webView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(img.mas_bottom).offset(16);
             make.width.equalTo(self.contentView.mas_width);
-            make.height.mas_equalTo(xScreenHeight);
+            make.height.mas_equalTo(500);
             make.bottom.equalTo(self.contentView.mas_bottom);
         }];
     }
     return self;
+}
+
+- (void)setHtmlStr:(NSString *)htmlStr {
+    
+    [_webView loadHTMLString:htmlStr baseURL:nil];
 }
 
 @end

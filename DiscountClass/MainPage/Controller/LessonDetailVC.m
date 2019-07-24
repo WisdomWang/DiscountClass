@@ -30,6 +30,7 @@ NSString *const xLessonDetailThreeCell = @"LessonDetailThreeCell";
 @property (nonatomic,strong) AddressListDetailModel *model;
 @property (nonatomic,strong) MBProgressHUD *HUD;
 @property (nonatomic,copy) NSString *eduTel;
+@property (nonatomic,copy) NSString *htmlStr;
 
 @end
 
@@ -46,6 +47,7 @@ NSString *const xLessonDetailThreeCell = @"LessonDetailThreeCell";
     
     [self initTableView];
     [self loadEduInfo];
+    [self loadCourseInfo];
 }
 
 - (void)initTableView {
@@ -205,6 +207,10 @@ NSString *const xLessonDetailThreeCell = @"LessonDetailThreeCell";
      } else {
          
          LessonDetailThreeCell *cell = [tableView dequeueReusableCellWithIdentifier:xLessonDetailThreeCell];
+         if (!xNullString(_htmlStr)) {
+              cell.htmlStr = _htmlStr;
+         }
+        
          cell.selectionStyle = UITableViewCellSelectionStyleNone;
          return cell;
      }
@@ -305,7 +311,6 @@ NSString *const xLessonDetailThreeCell = @"LessonDetailThreeCell";
             
         }
         
-        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
@@ -327,6 +332,34 @@ NSString *const xLessonDetailThreeCell = @"LessonDetailThreeCell";
         
         
     }];
+}
+
+- (void)loadCourseInfo {
+    
+    NSMutableDictionary *parameter = [[NSMutableDictionary alloc]init];
+    [parameter setValue: _m.courseId forKey:@"courseId"];
+    NSLog(@"%@",_m.courseId);
+    
+   AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json",@"text/javascript",@"text/html",@"text/plain",nil];
+    
+    [manager POST:GetCourseDetailHtml parameters: parameter progress:^(NSProgress * _Nonnull uploadProgress) {
+        //数据请求的进度
+    } success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
+        
+        NSString *result = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSLog(@"%@",result);
+        self.htmlStr = result;
+        [self.mainTableView reloadData];
+       
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"%@",error);
+    }];
+    
+    
 }
 
 /*

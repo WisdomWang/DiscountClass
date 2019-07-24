@@ -64,5 +64,12 @@
     return self;
 }
 
+- (void)setModel:(NewsListModel *)model {
+    
+    _titleLabel.text = model.title;
+    _timeLabel.text = model.releaseTime;
+    [_picImg sd_setImageWithURL:[NSURL URLWithString:model.img] placeholderImage:[UIImage imageNamed:@"imgPlaceholder"]];
+}
+
 
 @end

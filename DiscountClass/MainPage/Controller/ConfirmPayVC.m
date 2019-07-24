@@ -55,6 +55,8 @@ NSString *const xPayTwoCell = @"PayTwoCell";
     _mainTableView.showsVerticalScrollIndicator = NO;
     _mainTableView.tableHeaderView = self.userHeaderView;
     _mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _mainTableView.estimatedRowHeight = 200;
+    _mainTableView.rowHeight = UITableViewAutomaticDimension;
     [_mainTableView registerClass:[PayOrderOneCell class] forCellReuseIdentifier:xPayOneCell];
      [_mainTableView registerClass:[PayOrderTwoCell class] forCellReuseIdentifier:xPayTwoCell];
     [self.view addSubview:_mainTableView];
@@ -292,7 +294,7 @@ NSString *const xPayTwoCell = @"PayTwoCell";
                     self.HUD.label.textColor = [UIColor whiteColor];
                     self.HUD.bezelView.backgroundColor = [UIColor colorWithHexString:@"#999999"];
                    [self.HUD hideAnimated:YES afterDelay:1];
-                 //  [self payOrderRequest];
+                   [self payOrderRequest];
     
                 }];
                 

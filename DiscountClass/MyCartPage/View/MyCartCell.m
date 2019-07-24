@@ -74,15 +74,28 @@
             make.right.equalTo(bgView.mas_right).offset(-16);
         }];
         
+        
+        UILabel *placeLabel1 = [[UILabel alloc]init];
+        placeLabel1.textColor = [UIColor colorWithHexString:@"#999999"];
+        placeLabel1.font = [UIFont systemFontOfSize:11];
+        placeLabel1.text = @"开课时间：";
+        [bgView addSubview:placeLabel1];
+        [placeLabel1 mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.titleLabel.mas_bottom).offset(24);
+            make.left.equalTo(bgView.mas_left).offset(17);
+            make.width.mas_equalTo(60);
+        }];
+        
+        
         _timeLabel = [[UILabel alloc]init];
         _timeLabel.textColor = [UIColor colorWithHexString:@"#999999"];
         _timeLabel.font = [UIFont systemFontOfSize:11];
-        _timeLabel.text = @"开课时间：请咨询机构";
+        _timeLabel.text = @"请咨询机构";
         [bgView addSubview:_timeLabel];
         [_timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.titleLabel.mas_bottom).offset(24);
-            make.left.equalTo(bgView.mas_left).offset(17);
-            make.width.mas_equalTo(150);
+            make.left.equalTo(placeLabel1.mas_right);
+            make.right.equalTo(bgView.mas_right).offset(-17);
         }];
         
         UILabel *placeLabel = [[UILabel alloc]init];
@@ -93,12 +106,14 @@
         [placeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.timeLabel.mas_bottom).offset(13);
             make.left.equalTo(bgView.mas_left).offset(17);
+            make.width.mas_equalTo(60);
         }];
         
         _addressLabel = [[UILabel alloc]init];
         _addressLabel.textColor = [UIColor colorWithHexString:@"#999999"];
         _addressLabel.font = [UIFont systemFontOfSize:11];
         _addressLabel.numberOfLines = 0;
+        _addressLabel.textAlignment = NSTextAlignmentLeft;
         [bgView addSubview:_addressLabel];
         [_addressLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(placeLabel.mas_top);
