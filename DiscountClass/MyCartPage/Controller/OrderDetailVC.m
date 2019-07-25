@@ -36,7 +36,7 @@ NSString *const xConfirmCartTwoCell = @"ConfirmCartTwoCell";
 
 - (void)createUI {
     
-    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, xScreenWidth, xScreenHeight) style:UITableViewStylePlain];
+    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, xScreenWidth, xScreenHeight-82) style:UITableViewStylePlain];
     _mainTableView.backgroundColor = [UIColor colorWithHexString:@"#f8f8f8"];
     _mainTableView.delegate = self;
     _mainTableView.dataSource = self;
@@ -53,6 +53,7 @@ NSString *const xConfirmCartTwoCell = @"ConfirmCartTwoCell";
 - (void)createBottomView {
     
     UIView *bottomView = [[UIView alloc]init];
+    bottomView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:bottomView];
     [bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo(self.view);

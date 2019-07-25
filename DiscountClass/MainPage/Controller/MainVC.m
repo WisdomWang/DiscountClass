@@ -60,16 +60,14 @@ NSString *const xMainEduListCell = @"MainEduListCell";
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    
-     [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     
     
     [super viewWillDisappear:animated];
-    
-     [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
     
 }
 
@@ -360,11 +358,8 @@ NSString *const xMainEduListCell = @"MainEduListCell";
     MainSearchVC *vc = [[MainSearchVC alloc]init];
     vc.hidesBottomBarWhenPushed = YES;
     CATransition* transition = [CATransition animation];
-    
     transition.duration =0.4f;
-    
     transition.type = kCATransitionMoveIn;
-    
     transition.subtype = kCATransitionFromTop;
     
     [self.navigationController.view.layer addAnimation:transition forKey:kCATransition];

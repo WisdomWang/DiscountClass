@@ -8,8 +8,8 @@
 
 #import "FindVC.h"
 #import "ThirdLibsHeader.h"
-#import "findHotCell.h"
-#import "findListCell.h"
+#import "FindHotCell.h"
+#import "FindListCell.h"
 #import "NewsVC.h"
 #import "NewsModel.h"
 #import "LessonModel.h"
@@ -52,8 +52,8 @@ NSString *const xFindHotCell = @"FindHotCell";
     _mainTableView.showsVerticalScrollIndicator = NO;
 
     _mainTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    [_mainTableView registerClass:[findHotCell class] forCellReuseIdentifier:xFindHotCell];
-    [_mainTableView registerClass:[findListCell class] forCellReuseIdentifier:xFindListCell];
+    [_mainTableView registerClass:[FindHotCell class] forCellReuseIdentifier:xFindHotCell];
+    [_mainTableView registerClass:[FindListCell class] forCellReuseIdentifier:xFindListCell];
     [self.view addSubview:_mainTableView];
 }
 
@@ -117,7 +117,7 @@ NSString *const xFindHotCell = @"FindHotCell";
     __weak typeof(self) weakSelf = self;
     
     if (indexPath.section == 0) {
-        findHotCell *cell = [tableView dequeueReusableCellWithIdentifier:xFindHotCell];
+        FindHotCell *cell = [tableView dequeueReusableCellWithIdentifier:xFindHotCell];
         cell.backgroundColor = [UIColor colorWithHexString:@"#f8f8f8"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.cycleScrollView.imageURLStringsGroup = _picArr;
@@ -129,7 +129,7 @@ NSString *const xFindHotCell = @"FindHotCell";
         };
         return cell;
     } else {
-        findListCell *cell = [tableView dequeueReusableCellWithIdentifier:xFindListCell];
+        FindListCell *cell = [tableView dequeueReusableCellWithIdentifier:xFindListCell];
         cell.model = _newsListArr[indexPath.row];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;

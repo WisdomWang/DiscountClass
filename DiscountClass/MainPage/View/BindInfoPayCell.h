@@ -1,5 +1,5 @@
 //
-//  bindInfoPayCell.h
+//  BindInfoPayCell.h
 //  DiscountClass
 //
 //  Created by Cary on 2019/5/17.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface bindInfoPayCell : UITableViewCell
+@interface BindInfoPayCell : UITableViewCell
 
 @property (nonatomic,strong)UILabel *label;
 @property (nonatomic,strong)UITextField *textField;

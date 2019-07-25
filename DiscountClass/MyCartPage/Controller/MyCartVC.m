@@ -414,6 +414,9 @@ NSString *const xMyCartSectionHeader = @"MyCartSectionHeader";
     if (_EduArr.count > 0) {
         [_EduArr removeAllObjects];
     }
+    if (_selectedArr.count > 0) {
+        [_selectedArr removeAllObjects];
+    }
     
     NSMutableDictionary *parameter = [[NSMutableDictionary alloc]init];
     [parameter setValue:[[NSUserDefaults standardUserDefaults] valueForKey:UserId] forKey:@"userId"];

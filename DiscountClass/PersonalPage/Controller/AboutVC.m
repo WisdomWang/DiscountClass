@@ -27,6 +27,10 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"关于惠学习";
     
+    if ([UIDevice currentDevice].systemVersion.doubleValue <11.0) {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    
     _webView = [[WKWebView alloc]initWithFrame:CGRectMake(0, xTopHeight, xScreenWidth, xScreenHeight-xTopHeight)];
     [_webView loadRequest:[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://www.huifintech.com/aboutus.html"]]];
     

@@ -14,6 +14,7 @@
 #import "HelpCenterVC.h"
 #import "AboutVC.h"
 #import "LoginVC.h"
+#import "SingletonWebView.h"
 
 NSString *const xPersonalCell = @"PersonalCell";
 
@@ -215,10 +216,10 @@ NSString *const xPersonalCell = @"PersonalCell";
         }
         else if (indexPath.row == 2) {
             
-            NSMutableString * string = [[NSMutableString alloc] initWithFormat:@"tel:%@",@"4001559997"];
-            UIWebView * callWebview = [[UIWebView alloc] init];
-            [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:string]]];
-            [self.view addSubview:callWebview];
+             NSMutableString * string = [[NSMutableString alloc] initWithFormat:@"tel:%@",@"4001559997"];
+             UIWebView *callWebview = [SingletonWebView shareManager];
+             [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:string]]];
+             [self.view addSubview:callWebview];
         }
     }
     else if (indexPath.section == 2) {

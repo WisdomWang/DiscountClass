@@ -1,5 +1,5 @@
 //
-//  findListCell.h
+//  FindListCell.h
 //  DiscountClass
 //
 //  Created by Cary on 2019/5/7.
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface findListCell : UITableViewCell
+@interface FindListCell : UITableViewCell
 
 @property (nonatomic,strong) UIImageView *picImg;
 @property (nonatomic,strong) UILabel *titleLabel;

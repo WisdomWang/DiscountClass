@@ -1,15 +1,15 @@
 //
-//  bindInfoPayCell.m
+//  BindInfoPayCell.m
 //  DiscountClass
 //
 //  Created by Cary on 2019/5/17.
 //  Copyright © 2019 Cary. All rights reserved.
 //
 
-#import "bindInfoPayCell.h"
+#import "BindInfoPayCell.h"
 #import "ThirdLibsHeader.h"
 
-@implementation bindInfoPayCell
+@implementation BindInfoPayCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

@@ -30,6 +30,13 @@
     [self createUI];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    _textView.text = @"";
+    _infoText.text = @"";
+}
+
 - (void)createUI {
     
     UIImageView *bg = [[UIImageView alloc]initWithFrame:CGRectMake(0, xStatusBarHeight+xNavBarHeight, xScreenWidth, xScreenWidth/1.875)];

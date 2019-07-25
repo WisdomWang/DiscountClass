@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		4A0A7B44229535B10038CB99 /* OrderListOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0A7B43229535B10038CB99 /* OrderListOneCell.m */; };
 		4A0A7B4A22954A590038CB99 /* OrderListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0A7B4922954A590038CB99 /* OrderListModel.m */; };
-		4A0D9B3D228128FD00378CE9 /* findHotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D9B3C228128FD00378CE9 /* findHotCell.m */; };
-		4A0D9B4022812A0E00378CE9 /* findListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D9B3F22812A0E00378CE9 /* findListCell.m */; };
+		4A0D9B3D228128FD00378CE9 /* FindHotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D9B3C228128FD00378CE9 /* FindHotCell.m */; };
+		4A0D9B4022812A0E00378CE9 /* FindListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D9B3F22812A0E00378CE9 /* FindListCell.m */; };
 		4A0D9B4322816E3500378CE9 /* SettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D9B4222816E3500378CE9 /* SettingVC.m */; };
 		4A0D9B462281811D00378CE9 /* OpinionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D9B452281811D00378CE9 /* OpinionVC.m */; };
 		4A10BD0C228CFD7B0086A898 /* ConfirmOrderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A10BD0B228CFD7B0086A898 /* ConfirmOrderVC.m */; };
@@ -35,7 +35,7 @@
 		4A125D8A228BE7E200A79FC6 /* LessonDetailBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A125D89228BE7E200A79FC6 /* LessonDetailBottomView.m */; };
 		4A125D8E228BF46500A79FC6 /* UIButton+zt_adjustImageAndTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A125D8D228BF46500A79FC6 /* UIButton+zt_adjustImageAndTitle.m */; };
 		4A125D91228C12F800A79FC6 /* EduDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A125D90228C12F800A79FC6 /* EduDetailVC.m */; };
-		4A137DD0228E556F00CC9809 /* bindInfoPayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A137DCF228E556F00CC9809 /* bindInfoPayCell.m */; };
+		4A137DD0228E556F00CC9809 /* BindInfoPayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A137DCF228E556F00CC9809 /* BindInfoPayCell.m */; };
 		4A137DD3228E8AE600CC9809 /* CartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A137DD2228E8AE600CC9809 /* CartModel.m */; };
 		4A137DD6228E91BE00CC9809 /* CartSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A137DD5228E91BE00CC9809 /* CartSectionHeaderView.m */; };
 		4A18AB85228019030023A00C /* MyCartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A18AB84228019030023A00C /* MyCartCell.m */; };
@@ -48,6 +48,7 @@
 		4A1F80D22284075600B786E6 /* AllEduVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F80D12284075600B786E6 /* AllEduVC.m */; };
 		4A1F80D5228412D500B786E6 /* MainSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F80D4228412D500B786E6 /* MainSearchView.m */; };
 		4A1F80D822842B3500B786E6 /* OrderListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F80D722842B3500B786E6 /* OrderListVC.m */; };
+		4A35D76622E94C7A0066FD1E /* SingletonWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A35D76522E94C7A0066FD1E /* SingletonWebView.m */; };
 		4A6CEBC822E7F0030092B8CC /* BannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CEBC722E7F0030092B8CC /* BannerModel.m */; };
 		4A7BAD6A22782B580009CBF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7BAD6922782B580009CBF2 /* AppDelegate.m */; };
 		4A7BAD7022782B580009CBF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A7BAD6E22782B580009CBF2 /* Main.storyboard */; };
@@ -97,10 +98,10 @@
 		4A0A7B43229535B10038CB99 /* OrderListOneCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderListOneCell.m; sourceTree = "<group>"; };
 		4A0A7B4822954A590038CB99 /* OrderListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderListModel.h; sourceTree = "<group>"; };
 		4A0A7B4922954A590038CB99 /* OrderListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderListModel.m; sourceTree = "<group>"; };
-		4A0D9B3B228128FD00378CE9 /* findHotCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = findHotCell.h; sourceTree = "<group>"; };
-		4A0D9B3C228128FD00378CE9 /* findHotCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = findHotCell.m; sourceTree = "<group>"; };
-		4A0D9B3E22812A0E00378CE9 /* findListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = findListCell.h; sourceTree = "<group>"; };
-		4A0D9B3F22812A0E00378CE9 /* findListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = findListCell.m; sourceTree = "<group>"; };
+		4A0D9B3B228128FD00378CE9 /* FindHotCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindHotCell.h; sourceTree = "<group>"; };
+		4A0D9B3C228128FD00378CE9 /* FindHotCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindHotCell.m; sourceTree = "<group>"; };
+		4A0D9B3E22812A0E00378CE9 /* FindListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindListCell.h; sourceTree = "<group>"; };
+		4A0D9B3F22812A0E00378CE9 /* FindListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindListCell.m; sourceTree = "<group>"; };
 		4A0D9B4122816E3500378CE9 /* SettingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingVC.h; sourceTree = "<group>"; };
 		4A0D9B4222816E3500378CE9 /* SettingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingVC.m; sourceTree = "<group>"; };
 		4A0D9B442281811D00378CE9 /* OpinionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpinionVC.h; sourceTree = "<group>"; };
@@ -149,8 +150,8 @@
 		4A125D8D228BF46500A79FC6 /* UIButton+zt_adjustImageAndTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+zt_adjustImageAndTitle.m"; sourceTree = "<group>"; };
 		4A125D8F228C12F800A79FC6 /* EduDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EduDetailVC.h; sourceTree = "<group>"; };
 		4A125D90228C12F800A79FC6 /* EduDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EduDetailVC.m; sourceTree = "<group>"; };
-		4A137DCE228E556F00CC9809 /* bindInfoPayCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bindInfoPayCell.h; sourceTree = "<group>"; };
-		4A137DCF228E556F00CC9809 /* bindInfoPayCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bindInfoPayCell.m; sourceTree = "<group>"; };
+		4A137DCE228E556F00CC9809 /* BindInfoPayCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BindInfoPayCell.h; sourceTree = "<group>"; };
+		4A137DCF228E556F00CC9809 /* BindInfoPayCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BindInfoPayCell.m; sourceTree = "<group>"; };
 		4A137DD1228E8AE600CC9809 /* CartModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartModel.h; sourceTree = "<group>"; };
 		4A137DD2228E8AE600CC9809 /* CartModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartModel.m; sourceTree = "<group>"; };
 		4A137DD4228E91BE00CC9809 /* CartSectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartSectionHeaderView.h; sourceTree = "<group>"; };
@@ -175,6 +176,8 @@
 		4A1F80D4228412D500B786E6 /* MainSearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainSearchView.m; sourceTree = "<group>"; };
 		4A1F80D622842B3500B786E6 /* OrderListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderListVC.h; sourceTree = "<group>"; };
 		4A1F80D722842B3500B786E6 /* OrderListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderListVC.m; sourceTree = "<group>"; };
+		4A35D76422E94C7A0066FD1E /* SingletonWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingletonWebView.h; sourceTree = "<group>"; };
+		4A35D76522E94C7A0066FD1E /* SingletonWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingletonWebView.m; sourceTree = "<group>"; };
 		4A6CEBC622E7F0030092B8CC /* BannerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerModel.h; sourceTree = "<group>"; };
 		4A6CEBC722E7F0030092B8CC /* BannerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerModel.m; sourceTree = "<group>"; };
 		4A7BAD6522782B580009CBF2 /* DiscountClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiscountClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -376,8 +379,8 @@
 				4A125D89228BE7E200A79FC6 /* LessonDetailBottomView.m */,
 				4A10BD0D228D3C3E0086A898 /* SelectedAddressView.h */,
 				4A10BD0E228D3C3E0086A898 /* SelectedAddressView.m */,
-				4A137DCE228E556F00CC9809 /* bindInfoPayCell.h */,
-				4A137DCF228E556F00CC9809 /* bindInfoPayCell.m */,
+				4A137DCE228E556F00CC9809 /* BindInfoPayCell.h */,
+				4A137DCF228E556F00CC9809 /* BindInfoPayCell.m */,
 				4AF4EC8D22A50FC200E38C74 /* PayOrderOneCell.h */,
 				4AF4EC8E22A50FC200E38C74 /* PayOrderOneCell.m */,
 				4A1B74C022A643B0002AC71D /* PayOrderTwoCell.h */,
@@ -435,10 +438,10 @@
 		4A7BADA022782CDC0009CBF2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4A0D9B3B228128FD00378CE9 /* findHotCell.h */,
-				4A0D9B3C228128FD00378CE9 /* findHotCell.m */,
-				4A0D9B3E22812A0E00378CE9 /* findListCell.h */,
-				4A0D9B3F22812A0E00378CE9 /* findListCell.m */,
+				4A0D9B3B228128FD00378CE9 /* FindHotCell.h */,
+				4A0D9B3C228128FD00378CE9 /* FindHotCell.m */,
+				4A0D9B3E22812A0E00378CE9 /* FindListCell.h */,
+				4A0D9B3F22812A0E00378CE9 /* FindListCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -565,6 +568,8 @@
 				4A96235C22890C2700E655CB /* HttpRequestManager.m */,
 				4A96235A22890C1600E655CB /* TipsView.h */,
 				4A96235922890C1600E655CB /* TipsView.m */,
+				4A35D76422E94C7A0066FD1E /* SingletonWebView.h */,
+				4A35D76522E94C7A0066FD1E /* SingletonWebView.m */,
 				4A7BADB722782F160009CBF2 /* SystemCommon.h */,
 				4A7BADB822784DE00009CBF2 /* ThirdLibsHeader.h */,
 				4A9623622289100700E655CB /* APIConfig.h */,
@@ -803,7 +808,7 @@
 				4A10BD15228D5AC00086A898 /* PayOrderVC.m in Sources */,
 				4A137DD3228E8AE600CC9809 /* CartModel.m in Sources */,
 				4A96236522891F6C00E655CB /* LessonModel.m in Sources */,
-				4A137DD0228E556F00CC9809 /* bindInfoPayCell.m in Sources */,
+				4A137DD0228E556F00CC9809 /* BindInfoPayCell.m in Sources */,
 				4A7BADAF22782E470009CBF2 /* FindVC.m in Sources */,
 				4A18AB85228019030023A00C /* MyCartCell.m in Sources */,
 				4A7E4ED8229D16A300C17C63 /* UITextView+Placeholder.m in Sources */,
@@ -812,7 +817,7 @@
 				4A125D81228BAFED00A79FC6 /* LessonDetailCell.m in Sources */,
 				4A125D87228BC3E900A79FC6 /* LessonDetailThreeCell.m in Sources */,
 				4A10BD0F228D3C3E0086A898 /* SelectedAddressView.m in Sources */,
-				4A0D9B4022812A0E00378CE9 /* findListCell.m in Sources */,
+				4A0D9B4022812A0E00378CE9 /* FindListCell.m in Sources */,
 				4A125D8E228BF46500A79FC6 /* UIButton+zt_adjustImageAndTitle.m in Sources */,
 				4A0A7B4A22954A590038CB99 /* OrderListModel.m in Sources */,
 				4A1F80D22284075600B786E6 /* AllEduVC.m in Sources */,
@@ -836,8 +841,9 @@
 				4A92472F22A79C45003E7526 /* BankModel.m in Sources */,
 				4A18AB8822803A3E0023A00C /* CartBottomView.m in Sources */,
 				4A0A7B44229535B10038CB99 /* OrderListOneCell.m in Sources */,
+				4A35D76622E94C7A0066FD1E /* SingletonWebView.m in Sources */,
 				4A1F80CF2284072100B786E6 /* AllLessonVC.m in Sources */,
-				4A0D9B3D228128FD00378CE9 /* findHotCell.m in Sources */,
+				4A0D9B3D228128FD00378CE9 /* FindHotCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

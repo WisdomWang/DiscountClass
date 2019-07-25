@@ -1,15 +1,15 @@
 //
-//  findListCell.m
+//  FindListCell.m
 //  DiscountClass
 //
 //  Created by Cary on 2019/5/7.
 //  Copyright © 2019 Cary. All rights reserved.
 //
 
-#import "findListCell.h"
+#import "FindListCell.h"
 #import "ThirdLibsHeader.h"
 
-@implementation findListCell
+@implementation FindListCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -39,7 +39,6 @@
         _titleLabel = [[UILabel alloc]init];
         _titleLabel.textColor = [UIColor colorWithHexString:@"#515151"];
         _titleLabel.font = [UIFont boldSystemFontOfSize:16];
-        _titleLabel.text = @"管用的学习指南";
         _titleLabel.numberOfLines = 0;
         [self.contentView addSubview:_titleLabel];
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -51,7 +50,6 @@
         _timeLabel = [[UILabel alloc]init];
         _timeLabel.textColor = [UIColor colorWithHexString:@"#999999"];
         _timeLabel.font = [UIFont systemFontOfSize:12];
-        _timeLabel.text = @"今日推荐";
         [self.contentView addSubview:_timeLabel];
         [_timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.titleLabel.mas_bottom).offset(24);

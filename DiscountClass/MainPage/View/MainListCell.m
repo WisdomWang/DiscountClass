@@ -14,7 +14,6 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-     //self.addressLabel.preferredMaxLayoutWidth = self.addressLabel.frame.size.width;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -87,7 +86,6 @@
             
         }];
         
-        
         UILabel *placeLabel = [[UILabel alloc]init];
         placeLabel.textColor = [UIColor colorWithHexString:@"#999999"];
         placeLabel.font = [UIFont systemFontOfSize:11];
@@ -134,7 +132,7 @@
     _titleLabel.text = model.courseName;
     _addressLabel.text = model.address;
     NSInteger price = [model.price integerValue];
-    _priceLabel.text = [NSString stringWithFormat:@"￥%ld",price];
+    _priceLabel.text = [NSString stringWithFormat:@"￥%ld",(long)price];
     for (int i = 0; i<[model.popularityNum integerValue]; i++) {
         
         UIImageView *img = [self.contentView viewWithTag:i+200];

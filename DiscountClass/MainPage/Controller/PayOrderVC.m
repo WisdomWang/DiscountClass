@@ -8,7 +8,7 @@
 
 #import "PayOrderVC.h"
 #import "ThirdLibsHeader.h"
-#import "bindInfoPayCell.h"
+#import "BindInfoPayCell.h"
 #import "PayResultVC.h"
 #import "ConfirmPayVC.h"
 
@@ -56,7 +56,7 @@ NSString *const xBindInfoPayCell = @"BindInfoPayCell";
     _mainTableView.showsVerticalScrollIndicator = NO;
     _mainTableView.tableFooterView = self.userFooterView;
     _mainTableView.tableHeaderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, xScreenWidth, 20)];
-    [_mainTableView registerClass:[bindInfoPayCell class] forCellReuseIdentifier:xBindInfoPayCell];
+    [_mainTableView registerClass:[BindInfoPayCell class] forCellReuseIdentifier:xBindInfoPayCell];
     [self.view addSubview:_mainTableView];
 }
 
@@ -125,7 +125,7 @@ NSString *const xBindInfoPayCell = @"BindInfoPayCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    bindInfoPayCell *cell = [tableView dequeueReusableCellWithIdentifier:xBindInfoPayCell];
+    BindInfoPayCell *cell = [tableView dequeueReusableCellWithIdentifier:xBindInfoPayCell];
     cell.label.text = labelTextArr[indexPath.row];
     cell.textField.placeholder = detailTextArr[indexPath.row];
     cell.textField.delegate = self;
@@ -247,8 +247,6 @@ NSString *const xBindInfoPayCell = @"BindInfoPayCell";
                 [button setTitle:@"重新获取" forState:UIControlStateNormal];
                 [button setTitleColor:[UIColor colorWithHexString:@"#ff410e"] forState:0];
                 button.userInteractionEnabled = YES;
-                NSIndexPath *indexPath=[NSIndexPath indexPathForRow:3 inSection:0];
-                [self.mainTableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
             });
             
         } else {
@@ -257,10 +255,8 @@ NSString *const xBindInfoPayCell = @"BindInfoPayCell";
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 设置按钮显示读秒效果
                 [button setTitle:[NSString stringWithFormat:@"%.2ds", seconds] forState:UIControlStateNormal];
-                button.userInteractionEnabled = NO;
                 [button setTitleColor:[UIColor colorWithHexString:@"#999999"] forState:0];
-                NSIndexPath *indexPath=[NSIndexPath indexPathForRow:3 inSection:0];
-                [self.mainTableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
+                button.userInteractionEnabled = NO;
             });
             
             time--;
@@ -339,6 +335,10 @@ NSString *const xBindInfoPayCell = @"BindInfoPayCell";
                 [self.navigationController popViewControllerAnimated:YES];
             }
             
+        } else {
+            
+            NSString *msg = responseObject[@"msg"];
+            [TipsView showCenterTitle:msg duration:1 completion:nil];
         }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

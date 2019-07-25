@@ -26,14 +26,14 @@
 
 #define xiPhoneXAll (iPhoneX || iPhoneXR || iPhoneXS_Max)
 
-#define TestUserId  @"62d0b1b3d9ef4112868d2cd4e7406517"
-
 
 #define xNullString(string) ((![string isKindOfClass:[NSString class]]) || [string isEqualToString:@""] || (string == nil) || [string isEqualToString:@""] || [string isKindOfClass:[NSNull class]] || [[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0)
 
 #define PhoneNum  @"phoneNum"
 #define UserId    @"userId"
 
+
+#define TestUserId  @"62d0b1b3d9ef4112868d2cd4e7406517"
 #define HotCourseId  @"1cba4507fwg5506e211ac079ed"
 
 

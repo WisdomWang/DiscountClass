@@ -43,7 +43,6 @@
         _titleLabel = [[UILabel alloc]init];
         _titleLabel.textColor = [UIColor colorWithHexString:@"#333333"];
         _titleLabel.font = [UIFont boldSystemFontOfSize:16];
-        _titleLabel.text = @"为学子提供优质的教育";
         _titleLabel.numberOfLines = 0;
         [self.contentView addSubview:_titleLabel];
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -57,7 +56,6 @@
         _addressLabel.font = [UIFont systemFontOfSize:12];
         _addressLabel.numberOfLines = 0;
         _addressLabel.preferredMaxLayoutWidth = xScreenWidth - 200;
-        _addressLabel.text = @"上海市徐汇区田林路487号宝石园20号楼708-709室";
         [self.contentView addSubview:_addressLabel];
         [_addressLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.titleLabel.mas_bottom).offset(12);
@@ -73,7 +71,6 @@
             kindLabel.font = [UIFont systemFontOfSize:10];
             kindLabel.layer.borderWidth = 0.5;
             kindLabel.layer.borderColor = [[UIColor colorWithHexString:@"#f44640"] CGColor];
-            kindLabel.text = @"学历";
             kindLabel.textAlignment = NSTextAlignmentCenter;
             [self.contentView addSubview:kindLabel];
             kindLabel.tag = i+300;

@@ -17,6 +17,7 @@
 #import "AddressListModel.h"
 #import "SelectedAddressView.h"
 #import "LoginVC.h"
+#import "SingletonWebView.h"
 
 NSString *const xLessonDetailCell = @"LessonDetailCell";
 NSString *const xLessonDetailTwoCell = @"LessonDetailTwoCell";
@@ -102,7 +103,7 @@ NSString *const xLessonDetailThreeCell = @"LessonDetailThreeCell";
             return;
         }
         NSMutableString * string = [[NSMutableString alloc] initWithFormat:@"tel:%@",self.eduTel];
-        UIWebView * callWebview = [[UIWebView alloc] init];
+        UIWebView *callWebview = [SingletonWebView shareManager];
         [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:string]]];
         [self.view addSubview:callWebview];
         
@@ -130,9 +131,7 @@ NSString *const xLessonDetailThreeCell = @"LessonDetailThreeCell";
                 LoginVC *vc= [[LoginVC alloc]init];
                 [weakSelf.navigationController pushViewController:vc animated:YES];
             }
-           
         }
-      
     };
     
     [bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -308,9 +307,7 @@ NSString *const xLessonDetailThreeCell = @"LessonDetailThreeCell";
             [TipsView showCenterTitle:msg duration:1 completion:^{
                 
             }];
-            
         }
-        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
@@ -346,7 +343,7 @@ NSString *const xLessonDetailThreeCell = @"LessonDetailThreeCell";
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json",@"text/javascript",@"text/html",@"text/plain",nil];
     
     [manager POST:GetCourseDetailHtml parameters: parameter progress:^(NSProgress * _Nonnull uploadProgress) {
-        //数据请求的进度
+
     } success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
         
         NSString *result = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];

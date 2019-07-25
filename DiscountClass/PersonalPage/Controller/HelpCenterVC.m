@@ -25,6 +25,9 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"帮助中心";
     _webView = [[WKWebView alloc]initWithFrame:CGRectMake(0, xTopHeight, xScreenWidth, xScreenHeight-xTopHeight)];
+    if ([UIDevice currentDevice].systemVersion.doubleValue <11.0) {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    } 
     [_webView loadRequest:[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://weixin.huifintech.com/account.html#FAQ"]]];
     
     [self.view addSubview:_webView];
