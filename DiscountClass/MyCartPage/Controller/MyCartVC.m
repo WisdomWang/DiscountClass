@@ -46,7 +46,26 @@ NSString *const xMyCartSectionHeader = @"MyCartSectionHeader";
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    if (xNullString([[NSUserDefaults standardUserDefaults] valueForKey:UserId])) {
+        
+        self.bottomView.hidden = YES;
+        
+        if (_EduArr.count > 0) {
+            [_EduArr removeAllObjects];
+        }
+        if (_selectedArr.count > 0) {
+            [_selectedArr removeAllObjects];
+        }
+        [self.mainTableView reloadData];
+        return;
+    }
+    
     [self loadCartList];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
     [TipsView dismiss];
 }
 
@@ -59,7 +78,6 @@ NSString *const xMyCartSectionHeader = @"MyCartSectionHeader";
     } else {
         height = xScreenHeight-xTabBarHeight-55;
     }
-    
     
     _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, xScreenWidth, height) style:UITableViewStyleGrouped];
     _mainTableView.backgroundColor = [UIColor colorWithHexString:@"#f8f8f8"];
@@ -75,6 +93,10 @@ NSString *const xMyCartSectionHeader = @"MyCartSectionHeader";
     [_mainTableView registerClass:[MyCartCell class] forCellReuseIdentifier:xMyCartCell];
     [_mainTableView registerClass:[CartSectionHeaderView class] forHeaderFooterViewReuseIdentifier:xMyCartSectionHeader];
     [self.view addSubview:_mainTableView];
+    
+     [self createBottomView];
+    self.bottomView.hidden = YES;
+    
 }
 
 - (void)createBottomView {
@@ -172,9 +194,7 @@ NSString *const xMyCartSectionHeader = @"MyCartSectionHeader";
             CartEduModel *eduModel = self.EduArr[indexPath.section];
             CartLessonModel *lessonModel = eduModel.courseList[indexPath.row];
             [deleteArr addObject:lessonModel.courseId];
-            [self DeleteCartCourse:deleteArr];
-            
-            [self deleteGoodsWithIndexPath:indexPath];
+            [self deleteCartCourse:deleteArr indexPath:indexPath];
             
         }]];
         
@@ -354,8 +374,7 @@ NSString *const xMyCartSectionHeader = @"MyCartSectionHeader";
     
     if (count == 0) {
         //此处加载购物车为空的视图
-    [self.bottomView removeFromSuperview];
-        
+        self.bottomView.hidden = YES;
     }
     [self.mainTableView reloadData];
 }
@@ -415,12 +434,14 @@ NSString *const xMyCartSectionHeader = @"MyCartSectionHeader";
     if (_EduArr.count > 0) {
         [_EduArr removeAllObjects];
     }
+    
     if (_selectedArr.count > 0) {
         [_selectedArr removeAllObjects];
     }
     
     NSMutableDictionary *parameter = [[NSMutableDictionary alloc]init];
     [parameter setValue:[[NSUserDefaults standardUserDefaults] valueForKey:UserId] forKey:@"userId"];
+    
     [HttpRequestManager postWithUrlString:GetCourseCart parameters:parameter success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSString *repData = [xCommonFunction dictionaryToJson:responseObject];
@@ -432,27 +453,22 @@ NSString *const xMyCartSectionHeader = @"MyCartSectionHeader";
                 [self.EduArr addObject:EduModel];
             }
             if (self.EduArr.count > 0) {
-                [self createBottomView];
-            } else {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                     [self.bottomView removeFromSuperview];
-                });
+                self.bottomView.hidden = NO;
             }
+            else if (self.EduArr.count == 0) {
+                self.bottomView.hidden = YES;
+            }
+            
             [self.mainTableView reloadData];
             
         }
-        else {
-            
-            
-        }
-        
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
 }
 
-- (void)DeleteCartCourse:(NSMutableArray *)courseIds {
+- (void)deleteCartCourse:(NSMutableArray *)courseIds  indexPath:(NSIndexPath *)indexPath{
     
     NSMutableDictionary *parameter = [[NSMutableDictionary alloc]init];
     [parameter setValue:[[NSUserDefaults standardUserDefaults] valueForKey:UserId] forKey:@"userId"];
@@ -461,6 +477,7 @@ NSString *const xMyCartSectionHeader = @"MyCartSectionHeader";
         
         NSString *repData = [xCommonFunction dictionaryToJson:responseObject];
         NSLog(@"%@",repData);
+        [self deleteGoodsWithIndexPath:indexPath];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         

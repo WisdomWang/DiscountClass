@@ -166,7 +166,7 @@ NSString *const xSettingCell = @"SettingCell";
         [defaults setValue:nil forKey:PhoneNum];
         [defaults setValue:nil forKey:UserId];
         [defaults synchronize];
-         [self.navigationController popToRootViewControllerAnimated:YES];
+        [self.navigationController popToRootViewControllerAnimated:YES];
 
         
     }];
