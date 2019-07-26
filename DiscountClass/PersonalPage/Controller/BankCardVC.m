@@ -124,6 +124,10 @@ NSString *const xBankListCell = @"BankListCell";
             self.model = [[BankInfoModel alloc]initWithDic:basedata.data];
             [self.mainTableView reloadData];
             
+        } else {
+            
+            self.model = nil;
+            [self.mainTableView reloadData];
         }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
