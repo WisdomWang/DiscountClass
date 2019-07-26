@@ -51,6 +51,12 @@ NSString *const xLessonDetailThreeCell = @"LessonDetailThreeCell";
     [self loadCourseInfo];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    [TipsView dismiss];
+}
+
 - (void)initTableView {
     
     _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, xScreenWidth, xScreenHeight-50-xTabbarSafeBottomMargin) style:UITableViewStylePlain];

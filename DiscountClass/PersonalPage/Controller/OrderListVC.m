@@ -44,6 +44,11 @@ NSString *const xOrderListOneCell = @"OrderListOneCell";
     [self loadOrderList:@""];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    [TipsView dismiss];
+}
 
 - (void)createUI {
     

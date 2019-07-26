@@ -27,6 +27,12 @@
     [self createUI];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    [TipsView dismiss];
+}
+
 - (void)createUI {
     
     UIImageView *bgImage = [[UIImageView alloc]init];

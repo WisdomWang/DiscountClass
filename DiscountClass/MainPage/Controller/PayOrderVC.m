@@ -47,6 +47,12 @@ NSString *const xBindInfoPayCell = @"BindInfoPayCell";
     [self createUI];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    [TipsView dismiss];
+}
+
 - (void)createUI {
     
     _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, xScreenWidth, xScreenHeight) style:UITableViewStylePlain];

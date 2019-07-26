@@ -37,6 +37,12 @@
     _infoText.text = @"";
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    [TipsView dismiss];
+}
+
 - (void)createUI {
     
     UIImageView *bg = [[UIImageView alloc]initWithFrame:CGRectMake(0, xStatusBarHeight+xNavBarHeight, xScreenWidth, xScreenWidth/1.875)];

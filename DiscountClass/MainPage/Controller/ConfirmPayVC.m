@@ -262,6 +262,10 @@ NSString *const xPayTwoCell = @"PayTwoCell";
             PayOrderVC *vc = [[PayOrderVC alloc]init];
             vc.theType = FromOldBind;
             [self.navigationController pushViewController:vc animated:YES];
+        } else {
+            
+            NSString *msg = responseObject[@"msg"];
+            [TipsView showCenterTitle:msg duration:1 completion:nil];
         }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

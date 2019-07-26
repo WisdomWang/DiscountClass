@@ -42,6 +42,12 @@ NSString *const xConfirmOrderCell = @"ConfirmOrderCell";
 
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    [TipsView dismiss];
+}
+
 - (void)createUI {
     
     _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, xScreenWidth, xScreenHeight-82) style:UITableViewStylePlain];
@@ -250,13 +256,13 @@ NSString *const xConfirmOrderCell = @"ConfirmOrderCell";
             self.orderIds = responseObject[@"data"];
             
             [self GetAlinSignInfo];
+        }  else {
+            
+            NSString *msg = responseObject[@"msg"];
+            [TipsView showCenterTitle:msg duration:1 completion:nil];
         }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        NSDictionary *dic = error.userInfo;
-        NSString *str = dic[@"NSLocalizedDescription"];
-        [TipsView showCenterTitle:str duration:1 completion:nil];
         
     }];
 }

@@ -47,6 +47,7 @@ NSString *const xMyCartSectionHeader = @"MyCartSectionHeader";
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self loadCartList];
+    [TipsView dismiss];
 }
 
 - (void)createUI { 
