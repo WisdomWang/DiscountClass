@@ -403,6 +403,10 @@ NSString *const xMainEduListCell = @"MainEduListCell";
 
 - (void)loadEduIcon {
     
+    if (_eduListArr.count > 0) {
+        [_eduListArr removeAllObjects];
+    }
+    
     NSMutableDictionary *parameter = [[NSMutableDictionary alloc]init];
     [parameter setValue:@"9"forKey:@"size"];
     [parameter setValue:@"1"  forKey:@"current"];
