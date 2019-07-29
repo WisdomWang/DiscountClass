@@ -16,11 +16,18 @@
 NSString *const xConfirmCartCell = @"ConfirmCartCell";
 NSString *const xConfirmCartTwoCell = @"ConfirmCartTwoCell";
 
-@interface OrderDetailVC ()<UITableViewDelegate,UITableViewDataSource>
+@interface OrderDetailVC ()<UITableViewDelegate,UITableViewDataSource>  {
+    
+    NSArray *labelTextArr;
+    NSArray *detailTextArr;
+    NSArray *imgArr;
+    BOOL canPay;
+}
 
 @property (nonatomic,strong) UITableView *mainTableView;
 @property (nonatomic,strong) UIView *userHeaderView;
 @property (nonatomic,strong) NSMutableArray *orderIds;
+@property (nonatomic,strong) NSIndexPath *selectedIndexPath;
 
 @end
 
@@ -31,12 +38,17 @@ NSString *const xConfirmCartTwoCell = @"ConfirmCartTwoCell";
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"确认订单";
+    
+    labelTextArr = @[@"快捷支付",@"学费分期",@"微信支付",@"支付宝支付",@"信用卡分期",@"京东白条"];
+    detailTextArr = @[@"银联在线支付服务",@"惠学习学费分期",@"微信安全支付",@"支付宝安全支付",@"银联在线支付服务",@"京东白条支付"];
+    imgArr = @[@"UnionPayIcon",@"huiPayIcon",@"weixinPayIcon",@"aliPayIcon",@"stagesPayIcon",@"jdPayIcon"];
+    canPay = YES;
     [self createUI];
 }
 
 - (void)createUI {
     
-    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, xScreenWidth, xScreenHeight-82) style:UITableViewStylePlain];
+    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, xScreenWidth, xScreenHeight-82-xTabbarSafeBottomMargin) style:UITableViewStylePlain];
     _mainTableView.backgroundColor = [UIColor colorWithHexString:@"#f8f8f8"];
     _mainTableView.delegate = self;
     _mainTableView.dataSource = self;
@@ -134,8 +146,6 @@ NSString *const xConfirmCartTwoCell = @"ConfirmCartTwoCell";
         make.centerY.mas_equalTo(tipView.mas_centerY);
         make.left.mas_equalTo(tipIcon.mas_right).offset(7);
     }];
-    
-    
 }
 
 - (UIView *)userHeaderView {
@@ -159,7 +169,7 @@ NSString *const xConfirmCartTwoCell = @"ConfirmCartTwoCell";
     if (section == 0) {
         return _selectedArr.count;
     } else {
-        return 1;
+        return labelTextArr.count;
     }
 }
 
@@ -233,22 +243,55 @@ NSString *const xConfirmCartTwoCell = @"ConfirmCartTwoCell";
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:xConfirmCartTwoCell];
          
         }
-        cell.imageView.image = [UIImage imageNamed:@"UnionPayIcon"];
-        cell.accessoryView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"selectedIcon"]];
+        cell.imageView.image = [UIImage imageNamed:imgArr[indexPath.row]];
+        cell.accessoryView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"unSelectedIcon"]];
         cell.textLabel.font =[UIFont systemFontOfSize:16];
         cell.textLabel.textColor = [UIColor colorWithHexString:@"#333333"];
         cell.detailTextLabel.font = [UIFont systemFontOfSize:12];
         cell.detailTextLabel.textColor = [UIColor colorWithHexString:@"#a9a9a9"];
-        cell.textLabel.text = @"快捷支付";
-        cell.detailTextLabel.text = @"银联在线支付服务";
+        cell.textLabel.text = labelTextArr[indexPath.row];
+        cell.detailTextLabel.text = detailTextArr[indexPath.row];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        if (indexPath == _selectedIndexPath) {
+            cell.accessoryView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"selectedIcon"]];
+        } else {
+            cell.accessoryView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"unSelectedIcon"]];
+        }
+        if (!_selectedIndexPath) {
+            if (indexPath.section == 1 && indexPath.row == 0) {
+                cell.accessoryView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"selectedIcon"]];
+            }
+        }
         
         return cell;
     }
 
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section != 0) {
+        
+        _selectedIndexPath = indexPath;
+        if (indexPath.section ==1 && indexPath.row ==0) {
+            canPay = YES;
+        }
+        else {
+            canPay = NO;
+        }
+        [self.mainTableView reloadData];
+    }
+    
+}
+
+
 - (void)confirmOrderClick {
+    
+    if (canPay == NO) {
+        [self alertViewWithMessage:@"暂不支持该付款方式~" cancelTitle:@"知道了"];
+        return;
+    }
     
     NSMutableArray *selectedArr = [[NSMutableArray alloc]init];
     for (CartLessonModel *m in _selectedArr) {
@@ -308,6 +351,17 @@ NSString *const xConfirmCartTwoCell = @"ConfirmCartTwoCell";
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
+}
+
+- (void)alertViewWithMessage:(NSString *)message cancelTitle:(NSString *)title {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:title style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    [alert addAction:cancelAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 /*

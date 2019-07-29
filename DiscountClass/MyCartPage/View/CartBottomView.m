@@ -30,8 +30,8 @@
         [_selectedButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.mas_equalTo(self.mas_centerY);
             make.left.mas_equalTo(self.mas_left).offset(32);
-            make.width.mas_equalTo(16);
-            make.height.mas_equalTo(16);
+            make.width.mas_equalTo(22);
+            make.height.mas_equalTo(22);
         }];
         
         UILabel *allLabel = [[UILabel alloc]init];

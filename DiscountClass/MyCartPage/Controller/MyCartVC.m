@@ -42,10 +42,15 @@ NSString *const xMyCartSectionHeader = @"MyCartSectionHeader";
     _EduArr = [[NSMutableArray alloc]init];
     _selectedArr = [[NSMutableArray alloc]init];
     [self createUI];
+    [self loadCartList];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getNotification:) name:LoginNoti object:nil];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
     if (xNullString([[NSUserDefaults standardUserDefaults] valueForKey:UserId])) {
         
         self.bottomView.hidden = YES;
@@ -60,7 +65,6 @@ NSString *const xMyCartSectionHeader = @"MyCartSectionHeader";
         return;
     }
     
-    [self loadCartList];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -428,6 +432,13 @@ NSString *const xMyCartSectionHeader = @"MyCartSectionHeader";
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+//接收到通知的操作
+-(void) getNotification:(id)sender{
+    //接收的sender是发送的NSNotification通知
+    NSLog(@"%@",sender);
+    [self loadCartList];
+}
+
 
 - (void)loadCartList {
     
@@ -435,9 +446,9 @@ NSString *const xMyCartSectionHeader = @"MyCartSectionHeader";
         [_EduArr removeAllObjects];
     }
     
-    if (_selectedArr.count > 0) {
-        [_selectedArr removeAllObjects];
-    }
+//    if (_selectedArr.count > 0) {
+//        [_selectedArr removeAllObjects];
+//    }
     
     NSMutableDictionary *parameter = [[NSMutableDictionary alloc]init];
     [parameter setValue:[[NSUserDefaults standardUserDefaults] valueForKey:UserId] forKey:@"userId"];
@@ -483,6 +494,10 @@ NSString *const xMyCartSectionHeader = @"MyCartSectionHeader";
         
     }];
     
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 /*

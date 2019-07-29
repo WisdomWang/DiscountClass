@@ -43,8 +43,8 @@
         [_selectedButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(bgView.mas_top).offset(25);
             make.left.equalTo(bgView.mas_left).offset(16);
-            make.width.mas_equalTo(16);
-            make.height.mas_equalTo(16);
+            make.width.mas_equalTo(22);
+            make.height.mas_equalTo(22);
         }];
         
         _kindLabel = [[UILabel alloc]init];

@@ -238,11 +238,19 @@
         [hud hideAnimated:YES];
         if ([responseObject[@"success"] boolValue] == YES) {
             
+
+            
             NSDictionary *dic = responseObject[@"data"];
             NSString *useid = dic[@"userId"];
             NSUserDefaults *defaults= [NSUserDefaults standardUserDefaults];
             [defaults setValue:self.phoneText.text forKey:PhoneNum];
             [defaults setValue:useid forKey:UserId];
+            [defaults synchronize];
+            
+            NSNotification * notice = [NSNotification notificationWithName:LoginNoti object:nil userInfo:nil];
+            //发送消息
+            [[NSNotificationCenter defaultCenter]postNotification:notice];
+            
             [self.navigationController popViewControllerAnimated:YES];
             
         } else {

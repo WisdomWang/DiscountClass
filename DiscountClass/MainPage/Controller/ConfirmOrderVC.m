@@ -19,12 +19,15 @@ NSString *const xConfirmOrderCell = @"ConfirmOrderCell";
     
     NSArray *labelTextArr;
     NSArray *detailTextArr;
+    NSArray *imgArr;
+    BOOL canPay;
     
 }
 
 @property (nonatomic,strong) UITableView *mainTableView;
 @property (nonatomic,strong) UIView *userHeaderView;
 @property (nonatomic,strong) NSMutableArray *orderIds;
+@property (nonatomic,strong) NSIndexPath *selectedIndexPath;
 
 @end
 
@@ -35,8 +38,10 @@ NSString *const xConfirmOrderCell = @"ConfirmOrderCell";
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"确认订单";
-    labelTextArr = @[@"课程所属机构",@"购买数量",@"快捷支付"];
-    detailTextArr = @[_m.eduName,@"1",@"银联在线支付服务"];
+    labelTextArr = @[@"课程所属机构",@"购买数量",@"快捷支付",@"学费分期",@"微信支付",@"支付宝支付",@"信用卡分期",@"京东白条"];
+    detailTextArr = @[_m.eduName,@"1",@"银联在线支付服务",@"惠学习学费分期",@"微信安全支付",@"支付宝安全支付",@"银联在线支付服务",@"京东白条支付"];
+    imgArr = @[@"",@"",@"UnionPayIcon",@"huiPayIcon",@"weixinPayIcon",@"aliPayIcon",@"stagesPayIcon",@"jdPayIcon"];
+    canPay = YES;
     
     [self createUI];
 
@@ -50,7 +55,7 @@ NSString *const xConfirmOrderCell = @"ConfirmOrderCell";
 
 - (void)createUI {
     
-    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, xScreenWidth, xScreenHeight-82) style:UITableViewStylePlain];
+    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, xScreenWidth, xScreenHeight-82-xTabbarSafeBottomMargin) style:UITableViewStylePlain];
     _mainTableView.backgroundColor = [UIColor colorWithHexString:@"#f8f8f8"];
     _mainTableView.delegate = self;
     _mainTableView.dataSource = self;
@@ -195,44 +200,134 @@ NSString *const xConfirmOrderCell = @"ConfirmOrderCell";
     return _userHeaderView;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section==0) {
+        return 0;
+    } else {
+        return 44;
+    }
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, xScreenWidth, 44)];
+    view.backgroundColor = [UIColor whiteColor];
+    UILabel * headerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    headerLabel.backgroundColor = [UIColor clearColor];
+    headerLabel.opaque = NO;
+    headerLabel.textColor = [UIColor colorWithHexString:@"#515151"];
+    headerLabel.font = [UIFont boldSystemFontOfSize:12];
+    [view addSubview:headerLabel];
+    [headerLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(view.mas_centerY);
+        make.left.mas_equalTo(view.mas_left).offset(15);
+    }];
+    
+    if (section == 0) {
+        headerLabel.text = @"";
+    }
+    else if (section == 1) {
+        headerLabel.text = @"选择支付方式";
+    }
+    else {
+        headerLabel.text = @"其他支付方式";
+    }
+    
+    return view;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
     return 3;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    if(section == 0) {
+        return 2;
+    }
+    else if (section == 1) {
+        return 2;
+    }
+    else {
+        return 4;
+    }
+    
+   // return labelTextArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:xConfirmOrderCell];
-    if (indexPath.row == 2) {
-        if (!cell) {
-            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:xConfirmOrderCell];
-        }
-        
-        cell.imageView.image = [UIImage imageNamed:@"UnionPayIcon"];
-        cell.accessoryView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"selectedIcon"]];
-        cell.textLabel.font =[UIFont systemFontOfSize:16];
-        cell.textLabel.textColor = [UIColor colorWithHexString:@"#333333"];
-        cell.detailTextLabel.font = [UIFont systemFontOfSize:12];
-        cell.detailTextLabel.textColor = [UIColor colorWithHexString:@"#a9a9a9"];
-        
-    } else {
+    if (indexPath.section ==0) {
         
         if (!cell) {
-          cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:xConfirmOrderCell];
+            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:xConfirmOrderCell];
         }
         cell.textLabel.font =[UIFont systemFontOfSize:12];
         cell.textLabel.textColor = [UIColor colorWithHexString:@"#515151"];
         cell.detailTextLabel.font = [UIFont systemFontOfSize:12];
         cell.detailTextLabel.textColor = [UIColor colorWithHexString:@"#515151"];
+        
+        cell.textLabel.text = labelTextArr[indexPath.row];
+        cell.detailTextLabel.text = detailTextArr[indexPath.row];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    cell.textLabel.text = labelTextArr[indexPath.row];
-    cell.detailTextLabel.text = detailTextArr[indexPath.row];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    else {
+        
+        if (!cell) {
+            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:xConfirmOrderCell];
+        }
+        
+        cell.imageView.image = [UIImage imageNamed:imgArr[indexPath.row+indexPath.section*2]];
+        cell.accessoryView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"unSelectedIcon"]];
+        cell.textLabel.font =[UIFont systemFontOfSize:16];
+        cell.textLabel.textColor = [UIColor colorWithHexString:@"#333333"];
+        cell.detailTextLabel.font = [UIFont systemFontOfSize:12];
+        cell.detailTextLabel.textColor = [UIColor colorWithHexString:@"#a9a9a9"];
+        
+        cell.textLabel.text = labelTextArr[indexPath.row+indexPath.section*2];
+        cell.detailTextLabel.text = detailTextArr[indexPath.row+indexPath.section*2];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        if (indexPath == _selectedIndexPath) {
+            cell.accessoryView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"selectedIcon"]];
+        } else {
+            cell.accessoryView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"unSelectedIcon"]];
+        }
+        if (!_selectedIndexPath) {
+            if (indexPath.section == 1 && indexPath.row == 0) {
+                cell.accessoryView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"selectedIcon"]];
+            }
+        }
+    }
+
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section != 0) {
+        
+        _selectedIndexPath = indexPath;
+        if (indexPath.section ==1 && indexPath.row ==0) {
+            canPay = YES;
+        }
+        else {
+            canPay = NO;
+        }
+        [self.mainTableView reloadData];
+    }
+    
 }
 
 - (void)confirmOrderClick {
     
+    if (canPay == NO) {
+        [self alertViewWithMessage:@"暂不支持该付款方式~" cancelTitle:@"知道了"];
+        return;
+    }
     NSMutableArray *courseIds = [[NSMutableArray alloc]init];
     [courseIds addObject:_addressModel.courseId];
     [self createOrder:courseIds];
@@ -295,6 +390,17 @@ NSString *const xConfirmOrderCell = @"ConfirmOrderCell";
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
+}
+
+- (void)alertViewWithMessage:(NSString *)message cancelTitle:(NSString *)title {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:title style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    [alert addAction:cancelAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 /*

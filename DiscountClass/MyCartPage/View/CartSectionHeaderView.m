@@ -36,8 +36,8 @@
         [_selectedButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.mas_equalTo(view.mas_centerY);
             make.left.mas_equalTo(view.mas_left).offset(16);
-            make.width.mas_equalTo(16);
-            make.height.mas_equalTo(16);
+            make.width.mas_equalTo(22);
+            make.height.mas_equalTo(22);
         }];
         
         _headerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
