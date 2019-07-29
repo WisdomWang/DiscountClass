@@ -87,8 +87,8 @@ NSString *const xMyCartSectionHeader = @"MyCartSectionHeader";
     _mainTableView.backgroundColor = [UIColor colorWithHexString:@"#f8f8f8"];
     _mainTableView.delegate = self;
     _mainTableView.dataSource = self;
-    _mainTableView.emptyDataSetSource = self;
-    _mainTableView.emptyDataSetDelegate = self;
+//    _mainTableView.emptyDataSetSource = self;
+//    _mainTableView.emptyDataSetDelegate = self;
     _mainTableView.showsVerticalScrollIndicator = NO;
     _mainTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     _mainTableView.estimatedRowHeight = 200;
@@ -405,6 +405,10 @@ NSString *const xMyCartSectionHeader = @"MyCartSectionHeader";
     return [UIImage imageNamed:@"emptyCart"];
 }
 
+- (CGFloat)verticalOffsetForEmptyDataSet:(UIScrollView *)scrollView {
+    return 0;
+}
+
 - (NSAttributedString *)buttonTitleForEmptyDataSet:(UIScrollView *)scrollView forState:(UIControlState)state {
     
     NSLog(@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:UserId]);
@@ -469,6 +473,9 @@ NSString *const xMyCartSectionHeader = @"MyCartSectionHeader";
             else if (self.EduArr.count == 0) {
                 self.bottomView.hidden = YES;
             }
+            
+            self.mainTableView.emptyDataSetSource = self;
+            self.mainTableView.emptyDataSetDelegate = self;
             
             [self.mainTableView reloadData];
             

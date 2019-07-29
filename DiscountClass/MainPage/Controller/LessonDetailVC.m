@@ -299,6 +299,10 @@ NSString *const xLessonDetailThreeCell = @"LessonDetailThreeCell";
         NSLog(@"%@",repData);
         if ([responseObject[@"success"] boolValue] == YES) {
             
+            NSNotification * notice = [NSNotification notificationWithName:LoginNoti object:nil userInfo:nil];
+            //发送消息
+            [[NSNotificationCenter defaultCenter]postNotification:notice];
+            
             self.HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
             [self.view addSubview:self.HUD];
             self.HUD.mode = MBProgressHUDModeCustomView;

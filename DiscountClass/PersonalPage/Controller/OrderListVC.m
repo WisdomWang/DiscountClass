@@ -95,8 +95,8 @@ NSString *const xOrderListOneCell = @"OrderListOneCell";
     _mainTableView.backgroundColor = [UIColor colorWithHexString:@"#f8f8f8"];
     _mainTableView.delegate = self;
     _mainTableView.dataSource = self;
-    _mainTableView.emptyDataSetSource = self;
-    _mainTableView.emptyDataSetDelegate = self;
+//    _mainTableView.emptyDataSetSource = self;
+//    _mainTableView.emptyDataSetDelegate = self;
     _mainTableView.showsVerticalScrollIndicator = NO;
     _mainTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     _mainTableView.estimatedRowHeight = 200;
@@ -215,6 +215,10 @@ NSString *const xOrderListOneCell = @"OrderListOneCell";
                 
                 [self.orderListArr addObject:model];
             }
+            
+            self.mainTableView.emptyDataSetSource = self;
+            self.mainTableView.emptyDataSetDelegate = self;
+            
             [self.mainTableView reloadData];
         }
         

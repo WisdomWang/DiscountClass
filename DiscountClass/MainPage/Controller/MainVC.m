@@ -541,15 +541,15 @@ NSString *const xMainEduListCell = @"MainEduListCell";
         switch (status) {
             case AFNetworkReachabilityStatusUnknown:
                 NSLog(@"未知");
-                self->_mainTableView.emptyDataSetSource = self;
-                self->_mainTableView.emptyDataSetDelegate = self;
-                [self->_mainTableView reloadData];
+                self.mainTableView.emptyDataSetSource = self;
+                self.mainTableView.emptyDataSetDelegate = self;
+                [self.mainTableView reloadData];
                 break;
             case AFNetworkReachabilityStatusNotReachable:
                 NSLog(@"此时没有网络");
-                self->_mainTableView.emptyDataSetSource = self;
-                self->_mainTableView.emptyDataSetDelegate = self;
-                [self->_mainTableView reloadData];
+                self.mainTableView.emptyDataSetSource = self;
+                self.mainTableView.emptyDataSetDelegate = self;
+                [self.mainTableView reloadData];
                 
                 break;
             case AFNetworkReachabilityStatusReachableViaWWAN:
