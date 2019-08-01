@@ -306,10 +306,10 @@ NSString *const xLessonDetailThreeCell = @"LessonDetailThreeCell";
             self.HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
             [self.view addSubview:self.HUD];
             self.HUD.mode = MBProgressHUDModeCustomView;
-            self.HUD.customView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"successTipIcon"]];
+          //  self.HUD.customView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"successTipIcon"]];
             self.HUD.label.text = @"加入购物车成功";
             self.HUD.label.textColor = [UIColor whiteColor];
-            self.HUD.bezelView.backgroundColor = [UIColor colorWithHexString:@"#999999"];
+            self.HUD.bezelView.backgroundColor = [UIColor colorWithHexString:@"#333333"];
             [self.HUD hideAnimated:YES afterDelay:1];
         } else {
             

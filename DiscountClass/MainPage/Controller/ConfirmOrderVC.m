@@ -38,9 +38,9 @@ NSString *const xConfirmOrderCell = @"ConfirmOrderCell";
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"确认订单";
-    labelTextArr = @[@"课程所属机构",@"购买数量",@"快捷支付",@"学费分期",@"微信支付",@"支付宝支付",@"信用卡分期",@"京东白条"];
-    detailTextArr = @[_m.eduName,@"1",@"银联在线支付服务",@"惠学习学费分期",@"微信安全支付",@"支付宝安全支付",@"银联在线支付服务",@"京东白条支付"];
-    imgArr = @[@"",@"",@"UnionPayIcon",@"huiPayIcon",@"weixinPayIcon",@"aliPayIcon",@"stagesPayIcon",@"jdPayIcon"];
+    labelTextArr = @[@"课程所属机构",@"购买数量",@"快捷支付",@"学费分期",@"民生银行信用卡分期",@"微信支付",@"支付宝支付",@"京东白条"];
+    detailTextArr = @[_m.eduName,@"1",@"银联在线支付服务",@"惠学习学费分期",@"银联在线支付服务",@"微信安全支付",@"支付宝安全支付",@"京东白条支付"];
+    imgArr = @[@"",@"",@"UnionPayIcon",@"huiPayIcon",@"minshengPayIcon",@"weixinPayIcon",@"aliPayIcon",@"jdPayIcon"];
     canPay = YES;
     
     [self createUI];

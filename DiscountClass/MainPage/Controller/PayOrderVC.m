@@ -165,8 +165,7 @@ NSString *const xBindInfoPayCell = @"BindInfoPayCell";
             return;
         }
         
-        [self openCountdown:button];
-        [self GetSignCode];
+        [self GetSignCode:button];
     };
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
@@ -291,7 +290,7 @@ NSString *const xBindInfoPayCell = @"BindInfoPayCell";
     }
 }
 
-- (void)GetSignCode {
+- (void)GetSignCode:(UIButton *)button {
     
     NSMutableDictionary *parameter = [[NSMutableDictionary alloc]init];
     [parameter setValue:[[NSUserDefaults standardUserDefaults] valueForKey:UserId] forKey:@"userId"];
@@ -306,7 +305,10 @@ NSString *const xBindInfoPayCell = @"BindInfoPayCell";
         
         if ([responseObject[@"success"] boolValue] == YES) {
             
+            NSString *msg = responseObject[@"msg"];
+            [TipsView showCenterTitle:msg duration:1 completion:nil];
             self.srcreqsn = responseObject[@"data"][@"srcreqsn"];
+            [self openCountdown:button];
         } else {
             
             NSString *msg = responseObject[@"msg"];

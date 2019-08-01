@@ -441,7 +441,10 @@ NSString *const xMyCartSectionHeader = @"MyCartSectionHeader";
     //接收的sender是发送的NSNotification通知
     NSLog(@"%@",sender);
     [self loadCartList];
-}
+    //[self judgeIsAllSelect];
+    self.bottomView.isClick = NO;
+    [self countPrice];
+ }
 
 
 - (void)loadCartList {
@@ -450,9 +453,9 @@ NSString *const xMyCartSectionHeader = @"MyCartSectionHeader";
         [_EduArr removeAllObjects];
     }
     
-//    if (_selectedArr.count > 0) {
-//        [_selectedArr removeAllObjects];
-//    }
+    if (_selectedArr.count > 0) {
+        [_selectedArr removeAllObjects];
+    }
     
     NSMutableDictionary *parameter = [[NSMutableDictionary alloc]init];
     [parameter setValue:[[NSUserDefaults standardUserDefaults] valueForKey:UserId] forKey:@"userId"];

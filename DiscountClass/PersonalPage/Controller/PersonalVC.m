@@ -216,10 +216,12 @@ NSString *const xPersonalCell = @"PersonalCell";
         }
         else if (indexPath.row == 2) {
             
-             NSMutableString * string = [[NSMutableString alloc] initWithFormat:@"tel:%@",@"4001559997"];
-             UIWebView *callWebview = [SingletonWebView shareManager];
-             [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:string]]];
-             [self.view addSubview:callWebview];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSMutableString * string = [[NSMutableString alloc] initWithFormat:@"tel:%@",@"4001559997"];
+                UIWebView *callWebview = [SingletonWebView shareManager];
+                [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:string]]];
+                [self.view addSubview:callWebview];
+            });
         }
     }
     else if (indexPath.section == 2) {
