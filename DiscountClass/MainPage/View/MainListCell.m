@@ -138,6 +138,12 @@
         UIImageView *img = [self.contentView viewWithTag:i+200];
         img.image = [UIImage imageNamed:@"popularityStart_light"];
     }
+    
+    for (int i = [model.popularityNum intValue]; i<5; i++) {
+        
+        UIImageView *img = [self.contentView viewWithTag:i+200];
+        img.image = [UIImage imageNamed:@"popularityStart_dark"];
+    }
 }
 
 @end
