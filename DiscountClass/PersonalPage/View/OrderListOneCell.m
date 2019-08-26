@@ -207,7 +207,7 @@
     }
     else if (model.orderStatus ==1) {
         _statusImg.image = [UIImage imageNamed:@"orderStatusWillPay"];
-        _delButton.hidden = YES;
+        _delButton.hidden = NO;
         _payButton.hidden = NO;
     }
     else if (model.orderStatus ==2) {
