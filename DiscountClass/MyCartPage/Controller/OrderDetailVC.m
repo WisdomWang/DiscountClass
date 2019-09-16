@@ -222,7 +222,7 @@ NSString *const xConfirmCartTwoCell = @"ConfirmCartTwoCell";
         numLabel.text = @"";
     } else {
         headerLabel.text = @"购买数量";
-        numLabel.text = [NSString stringWithFormat:@"%ld",_selectedArr.count];
+        numLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)_selectedArr.count];
     }
     
     return view;

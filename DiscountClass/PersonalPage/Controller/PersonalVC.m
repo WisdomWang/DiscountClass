@@ -38,7 +38,7 @@ NSString *const xPersonalCell = @"PersonalCell";
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"我的";
 
-    arrName = @[@"我的订单",@"银行卡",@"帮助中心",@"关于惠学习",@"在线客服",@"设置"];
+    arrName = @[@"我的订单",@"银行卡",@"帮助中心",@"关于惠课堂",@"在线客服",@"设置"];
     arrImg  =  @[@"baseInfoIcon",@"bankInfoIcon",@"helpInfoIcon",@"aboutInfoIcon",@"customerInfoIcon",@"settingInfoIcon"];
     
     [self initUserTable];

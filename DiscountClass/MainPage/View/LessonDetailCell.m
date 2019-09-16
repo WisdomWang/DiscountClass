@@ -106,7 +106,7 @@
     _kindLabel.text = model.courseType;
     _titleLabel.text = model.courseName;
     NSInteger price = [model.price integerValue];
-    _priceLabel.text = [NSString stringWithFormat:@"￥%ld",price];
+    _priceLabel.text = [NSString stringWithFormat:@"￥%ld",(long)price];
     for (int i = 0; i<[model.popularityNum integerValue]; i++) {
         
         UIImageView *img = [self.contentView viewWithTag:i+200];
