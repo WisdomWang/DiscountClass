@@ -329,32 +329,6 @@ NSString *const xMainEduListCell = @"MainEduListCell";
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     
-//    _mainSearchView = [[MainSearchView alloc]initWithFrame:CGRectMake(0, xScreenHeight, xScreenWidth, xScreenHeight-xTopHeight)];
-//    UIWindow *window = [UIApplication sharedApplication].keyWindow;
-//     [window insertSubview:_mainSearchView aboveSubview:window];
-//    [UIView animateWithDuration:0.5 animations:^{
-//        self.mainSearchView.frame = CGRectMake(0, 0, xScreenWidth, xScreenHeight);
-//
-//    } completion:^(BOOL finished) {
-//
-//    }];
-//     __weak typeof(self) weakSelf = self;
-//    _mainSearchView.cancelBlock = ^{
-//    };
-//    _mainSearchView.searchLessonBlock = ^(LessonArrModel * _Nonnull m) {
-//
-//        [UIView animateWithDuration:0.5 animations:^{
-//            weakSelf.mainSearchView.frame = CGRectMake(0, xScreenHeight, xScreenWidth, xScreenHeight);
-//        } completion:^(BOOL finished) {
-//            [weakSelf.mainSearchView removeFromSuperview];
-//        }];
-//
-//        LessonDetailVC *vc = [[LessonDetailVC alloc]init];
-//        vc.m = m;
-//        vc.hidesBottomBarWhenPushed = YES;
-//        [weakSelf.navigationController pushViewController:vc animated:YES];
-//    };
-    
     MainSearchVC *vc = [[MainSearchVC alloc]init];
     vc.hidesBottomBarWhenPushed = YES;
     CATransition* transition = [CATransition animation];
