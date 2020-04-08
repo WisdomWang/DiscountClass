@@ -458,10 +458,6 @@ NSString *const xMainEduListCell = @"MainEduListCell";
     }];
 }
 
-//- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView {
-//    return [UIImage imageNamed:@"settingInfoIcon"];
-//}
-
 - (NSAttributedString *)buttonTitleForEmptyDataSet:(UIScrollView *)scrollView forState:(UIControlState)state {
     NSString *text = @"网络不给力，请点击重试哦~";
     

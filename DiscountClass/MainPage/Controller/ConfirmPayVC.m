@@ -189,10 +189,6 @@ NSString *const xPayTwoCell = @"PayTwoCell";
 
 - (void)gotoPay {
     
-//    PayResultVC *vc = [[PayResultVC alloc]init];
-//    vc.bankNo = self.model.accountNo;
-//    [self.navigationController pushViewController:vc animated:YES];
-    
     [self fingerVerification];
 }
 
@@ -290,14 +286,6 @@ NSString *const xPayTwoCell = @"PayTwoCell";
                 [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                     //用户选择输入密码，切换主线程处理
                     NSLog(@"用户选择输入密码，切换主线程处理");
-//                    self.HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-//                    [self.view addSubview:self.HUD];
-//                    self.HUD.mode = MBProgressHUDModeCustomView;
-//                    self.HUD.customView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"successTipIcon"]];
-//                    self.HUD.label.text = @"验证通过";
-//                    self.HUD.label.textColor = [UIColor whiteColor];
-//                    self.HUD.bezelView.backgroundColor = [UIColor colorWithHexString:@"#999999"];
-//                   [self.HUD hideAnimated:YES afterDelay:1];
                    [self payOrderRequest];
     
                 }];
