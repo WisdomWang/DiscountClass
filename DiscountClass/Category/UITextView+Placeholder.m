@@ -43,6 +43,7 @@
     dispatch_once(&onceToken, ^{
         UITextField *textField = [[UITextField alloc] init];
         textField.placeholder = @" ";
+        //iOS13之前KVC可访问_placeholderLabel.textColor不会崩溃 iOS13之后则会崩溃 换成访问placeholderLabel.textColor
         //color = [textField valueForKeyPath:@"_placeholderLabel.textColor"];
         color = [textField valueForKeyPath:@"placeholderLabel.textColor"];
     });
