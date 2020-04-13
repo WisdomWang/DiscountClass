@@ -75,7 +75,7 @@
         make.height.mas_equalTo(44);
     }];
     UIButton *nextButton1 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [nextButton1 setTitle:@"返回首页" forState:0];
+    [nextButton1 setTitle:@"返回个人中心" forState:0];
     [nextButton1 setTitleColor:[UIColor colorWithHexString:@"#f44640"] forState:0];
     nextButton1.titleLabel.font = [UIFont systemFontOfSize:17];
     nextButton1.layer.borderColor= [UIColor colorWithHexString:@"#f44640"].CGColor;
