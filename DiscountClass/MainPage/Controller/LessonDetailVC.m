@@ -62,7 +62,6 @@ NSString *const xLessonDetailThreeCell = @"LessonDetailThreeCell";
         //发送消息
         [[NSNotificationCenter defaultCenter]postNotification:notice];
     }
-
 }
 
 - (void)initTableView {
