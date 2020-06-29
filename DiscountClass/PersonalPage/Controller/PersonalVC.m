@@ -14,7 +14,6 @@
 #import "HelpCenterVC.h"
 #import "AboutVC.h"
 #import "LoginVC.h"
-#import "SingletonWebView.h"
 
 NSString *const xPersonalCell = @"PersonalCell";
 
@@ -217,11 +216,6 @@ NSString *const xPersonalCell = @"PersonalCell";
         else if (indexPath.row == 2) {
             
             dispatch_async(dispatch_get_main_queue(), ^{
-//                NSMutableString * string = [[NSMutableString alloc] initWithFormat:@"tel:%@",@"4001559997"];
-//                UIWebView *callWebview = [SingletonWebView shareManager];
-//                [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:string]]];
-//                [self.view addSubview:callWebview];
-                
             if (@available(iOS 10.0, *)) {
                        NSString * telprompt = [[NSMutableString alloc] initWithFormat:@"telprompt://%@",@"4001559997"];
                        [[UIApplication sharedApplication] openURL:[NSURL URLWithString: telprompt] options:@{} completionHandler:nil];

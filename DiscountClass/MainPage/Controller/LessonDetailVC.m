@@ -17,7 +17,6 @@
 #import "AddressListModel.h"
 #import "SelectedAddressView.h"
 #import "LoginVC.h"
-#import "SingletonWebView.h"
 
 NSString *const xLessonDetailCell = @"LessonDetailCell";
 NSString *const xLessonDetailTwoCell = @"LessonDetailTwoCell";
@@ -115,12 +114,7 @@ NSString *const xLessonDetailThreeCell = @"LessonDetailThreeCell";
             [TipsView showCenterTitle:@"暂无联系方式" duration:1 completion:nil];
             return;
         }
-//        NSMutableString * string = [[NSMutableString alloc] initWithFormat:@"tel:%@",self.eduTel];
-//        UIWebView *callWebview = [SingletonWebView shareManager];
-//        [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:string]]];
-//        [self.view addSubview:callWebview];
-        
-        
+
         if (@available(iOS 10.0, *)) {
             NSString * telprompt = [[NSMutableString alloc] initWithFormat:@"telprompt://%@",self.eduTel];
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString: telprompt] options:@{} completionHandler:nil];

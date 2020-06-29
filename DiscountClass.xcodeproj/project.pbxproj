@@ -48,7 +48,6 @@
 		4A1F80D22284075600B786E6 /* AllEduVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F80D12284075600B786E6 /* AllEduVC.m */; };
 		4A1F80D5228412D500B786E6 /* MainSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F80D4228412D500B786E6 /* MainSearchView.m */; };
 		4A1F80D822842B3500B786E6 /* OrderListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F80D722842B3500B786E6 /* OrderListVC.m */; };
-		4A35D76622E94C7A0066FD1E /* SingletonWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A35D76522E94C7A0066FD1E /* SingletonWebView.m */; };
 		4A6CEBC822E7F0030092B8CC /* BannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CEBC722E7F0030092B8CC /* BannerModel.m */; };
 		4A7BAD6A22782B580009CBF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7BAD6922782B580009CBF2 /* AppDelegate.m */; };
 		4A7BAD7022782B580009CBF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A7BAD6E22782B580009CBF2 /* Main.storyboard */; };
@@ -175,8 +174,6 @@
 		4A1F80D4228412D500B786E6 /* MainSearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainSearchView.m; sourceTree = "<group>"; };
 		4A1F80D622842B3500B786E6 /* OrderListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderListVC.h; sourceTree = "<group>"; };
 		4A1F80D722842B3500B786E6 /* OrderListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderListVC.m; sourceTree = "<group>"; };
-		4A35D76422E94C7A0066FD1E /* SingletonWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingletonWebView.h; sourceTree = "<group>"; };
-		4A35D76522E94C7A0066FD1E /* SingletonWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingletonWebView.m; sourceTree = "<group>"; };
 		4A6CEBC622E7F0030092B8CC /* BannerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerModel.h; sourceTree = "<group>"; };
 		4A6CEBC722E7F0030092B8CC /* BannerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerModel.m; sourceTree = "<group>"; };
 		4A7BAD6522782B580009CBF2 /* DiscountClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiscountClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -565,8 +562,6 @@
 				4A96235C22890C2700E655CB /* HttpRequestManager.m */,
 				4A96235A22890C1600E655CB /* TipsView.h */,
 				4A96235922890C1600E655CB /* TipsView.m */,
-				4A35D76422E94C7A0066FD1E /* SingletonWebView.h */,
-				4A35D76522E94C7A0066FD1E /* SingletonWebView.m */,
 				4A7BADB722782F160009CBF2 /* SystemCommon.h */,
 				4A7BADB822784DE00009CBF2 /* ThirdLibsHeader.h */,
 				4A9623622289100700E655CB /* APIConfig.h */,
@@ -837,7 +832,6 @@
 				4A92472F22A79C45003E7526 /* BankModel.m in Sources */,
 				4A18AB8822803A3E0023A00C /* CartBottomView.m in Sources */,
 				4A0A7B44229535B10038CB99 /* OrderListOneCell.m in Sources */,
-				4A35D76622E94C7A0066FD1E /* SingletonWebView.m in Sources */,
 				4A1F80CF2284072100B786E6 /* AllLessonVC.m in Sources */,
 				4A0D9B3D228128FD00378CE9 /* FindHotCell.m in Sources */,
 			);
